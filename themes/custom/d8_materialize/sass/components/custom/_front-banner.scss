@@ -1,12 +1,13 @@
 /**
-* Frontpage Banner
+* Frontpage Banner & Blocks
 */
 .camp-gdl-front {
   background-position: center center;
   background: radial-gradient( circle, #3091B9, #194B6E);
 }
 .fighter-camp img {
-  display: none;
+  @include transition(all .5s)
+  opacity: 0;
   max-width: 100%;
 }
 .path-frontpage h2 {
@@ -14,6 +15,11 @@
   font-weight: bold;
   color: rgb(90, 174, 212);
   text-shadow: 1px 2px 2px rgb(204, 204, 204);
+}
+.block-acerca .title {
+  @media #{$medium-and-up}{
+    margin-left: -1em;
+  }
 }
 .gmap {
   width: 100%;
@@ -27,11 +33,13 @@
   background-repeat: no-repeat;
   background-position: 50% center;
   background-size: 75% 100%;
-  height: 715px;
 }
 .date-camp {
   text-align: center;
   img {
-    display: none;
+    opacity: 0;
+    @media #{$small-and-down}{
+      max-width: 70px;
+    }
   }
 }

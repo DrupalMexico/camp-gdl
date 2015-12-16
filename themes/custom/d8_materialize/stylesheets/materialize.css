@@ -10442,7 +10442,7 @@ nav .button-collapse {
   .top-nav.sticky {
     position: fixed;
     height: 75px;
-    z-index: 9999999;
+    z-index: 90;
     opacity: .95;
     background-color: #1D597D; }
     .top-nav.sticky .site-name {
@@ -10465,6 +10465,16 @@ nav .button-collapse {
 nav.menu--main {
   box-shadow: none;
   background-color: transparent; }
+
+.social-med a {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #50B950; }
+  .social-med a:hover {
+    color: #4DB6AC; }
+
+.fa-envelope-o {
+  font-size: 26px; }
 
 .toolbar-lining nav ul li {
   float: initial; }
@@ -10618,7 +10628,7 @@ footer.page-footer .menu--footer a {
     text-align: center; }
 
 /**
-* Frontpage Banner
+* Frontpage Banner & Blocks
 */
 .camp-gdl-front {
   background-position: center center;
@@ -10626,7 +10636,9 @@ footer.page-footer .menu--footer a {
   background: radial-gradient(circle, #3091B9, #194B6E); }
 
 .fighter-camp img {
-  display: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
   max-width: 100%; }
 
 .path-frontpage h2 {
@@ -10634,6 +10646,10 @@ footer.page-footer .menu--footer a {
   font-weight: bold;
   color: #5aaed4;
   text-shadow: 1px 2px 2px #cccccc; }
+
+@media only screen and (min-width: 601px) {
+  .block-acerca .title {
+    margin-left: -1em; } }
 
 .gmap {
   width: 100%;
@@ -10646,13 +10662,15 @@ footer.page-footer .menu--footer a {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% center;
-  background-size: 75% 100%;
-  height: 715px; }
+  background-size: 75% 100%; }
 
 .date-camp {
   text-align: center; }
   .date-camp img {
-    display: none; }
+    opacity: 0; }
+    @media only screen and (max-width: 600px) {
+      .date-camp img {
+        max-width: 70px; } }
 
 /* BEGIN Light */
 @font-face {
