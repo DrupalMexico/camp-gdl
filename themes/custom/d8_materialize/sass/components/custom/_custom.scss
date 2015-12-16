@@ -186,6 +186,18 @@ nav.menu--main {
   background-color: transparent;
 }
 
+// social media
+.social-med a {
+  @include transition(all .5s);
+  color: #50B950;
+  &:hover {
+    color: #4DB6AC;
+  }
+}
+.fa-envelope-o {
+  font-size: 26px;
+}
+
 // tool-bar menu
 .toolbar-lining {
   nav ul li {
