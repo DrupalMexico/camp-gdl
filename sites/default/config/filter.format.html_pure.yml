@@ -1,0 +1,8 @@
+uuid: 23303367-0129-4102-8645-69a4e3f8fa5d
+langcode: en
+status: true
+dependencies: {  }
+name: 'HTML pure'
+format: html_pure
+weight: 0
+filters: {  }

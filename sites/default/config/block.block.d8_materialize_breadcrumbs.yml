@@ -9,7 +9,7 @@ dependencies:
 id: d8_materialize_breadcrumbs
 theme: d8_materialize
 region: '-1'
-weight: -12
+weight: -8
 provider: null
 plugin: system_breadcrumb_block
 settings:

@@ -12,7 +12,7 @@ dependencies:
 id: universidaddeguadalajara
 theme: d8_materialize
 region: '-1'
-weight: -1
+weight: -2
 provider: null
 plugin: 'block_content:a4d8f130-4b26-4a2b-8e00-c4bd36d7bcfa'
 settings:

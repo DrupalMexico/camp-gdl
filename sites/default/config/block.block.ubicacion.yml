@@ -1,9 +1,9 @@
-uuid: e891e573-2625-4f67-bf49-73a3e468c076
+uuid: 1f97db8e-5035-450c-af08-8f03df3c36eb
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:922d5fad-4873-4d72-aa2f-474243689ff0'
+    - 'block_content:basic:298d9867-b2d9-4a6d-b200-e64571591f0a'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: ubicacion
 theme: d8_materialize
 region: content
-weight: -8
+weight: -7
 provider: null
-plugin: 'block_content:922d5fad-4873-4d72-aa2f-474243689ff0'
+plugin: 'block_content:298d9867-b2d9-4a6d-b200-e64571591f0a'
 settings:
-  id: 'block_content:922d5fad-4873-4d72-aa2f-474243689ff0'
+  id: 'block_content:298d9867-b2d9-4a6d-b200-e64571591f0a'
   label: Ubicación
   provider: block_content
   label_display: '0'

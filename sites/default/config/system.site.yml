@@ -1,11 +1,11 @@
 uuid: 5dc8e672-0ab9-45bb-8e1d-2914b9e2c332
-name: 'DrupalCamp Guadalajara'
+name: 'DrupalCamp Guadalajara - 7, 8 y 9 de Abril'
 mail: info@drupalcamp.mx
 slogan: 'Tequila, mariachi y Drupal'
 page:
   403: ''
   404: ''
-  front: /node/7
+  front: /node/2
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

@@ -1,0 +1,25 @@
+uuid: 38c69d38-780d-4ad0-b200-e1cacc5a6689
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:87412048-1e74-4b88-8409-9afb870ccbfc'
+  module:
+    - block_content
+  theme:
+    - d8_materialize
+id: poweredbypantheon
+theme: d8_materialize
+region: footer_bottom
+weight: -13
+provider: null
+plugin: 'block_content:87412048-1e74-4b88-8409-9afb870ccbfc'
+settings:
+  id: 'block_content:87412048-1e74-4b88-8409-9afb870ccbfc'
+  label: 'Powered by pantheon'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

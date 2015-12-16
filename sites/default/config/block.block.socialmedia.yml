@@ -1,23 +1,23 @@
-uuid: 5543e2b7-2081-49d2-8a00-e88dcd2af175
+uuid: 11a73238-ec62-484f-9900-a524e8b99ee5
 langcode: en
-status: false
+status: true
 dependencies:
   content:
-    - 'block_content:basic:f0893a89-afb4-4998-8400-f9898b1e76fa'
+    - 'block_content:basic:27b82681-ca9d-4c96-a947-71bba8bec6d7'
   module:
     - block_content
     - system
   theme:
     - d8_materialize
-id: paralaxblocktest
+id: socialmedia
 theme: d8_materialize
-region: '-1'
-weight: -11
+region: footer_right
+weight: null
 provider: null
-plugin: 'block_content:f0893a89-afb4-4998-8400-f9898b1e76fa'
+plugin: 'block_content:27b82681-ca9d-4c96-a947-71bba8bec6d7'
 settings:
-  id: 'block_content:f0893a89-afb4-4998-8400-f9898b1e76fa'
-  label: 'Drupalcamp Guadalajara Parallax Box'
+  id: 'block_content:27b82681-ca9d-4c96-a947-71bba8bec6d7'
+  label: 'Social Media'
   provider: block_content
   label_display: '0'
   status: true

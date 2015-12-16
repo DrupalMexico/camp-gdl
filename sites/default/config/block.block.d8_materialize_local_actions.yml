@@ -7,7 +7,7 @@ dependencies:
 id: d8_materialize_local_actions
 theme: d8_materialize
 region: content
-weight: -6
+weight: -9
 provider: null
 plugin: local_actions_block
 settings:

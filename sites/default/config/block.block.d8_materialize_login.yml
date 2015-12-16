@@ -9,7 +9,7 @@ dependencies:
 id: d8_materialize_login
 theme: d8_materialize
 region: '-1'
-weight: 1
+weight: 0
 provider: null
 plugin: user_login_block
 settings:
