@@ -11,7 +11,7 @@ dependencies:
 id: counter
 theme: d8_materialize
 region: content
-weight: -8
+weight: -7
 provider: null
 plugin: 'block_content:746058fe-3a67-40c4-a212-18c4be80a8fc'
 settings:

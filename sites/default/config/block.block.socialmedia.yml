@@ -1,12 +1,11 @@
-uuid: 11a73238-ec62-484f-9900-a524e8b99ee5
+uuid: 14783e84-aad4-447a-b72e-46c310195dee
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:27b82681-ca9d-4c96-a947-71bba8bec6d7'
+    - 'block_content:basic:0e9ab122-a6f2-4559-b214-20b24acca58d'
   module:
     - block_content
-    - system
   theme:
     - d8_materialize
 id: socialmedia
@@ -14,18 +13,13 @@ theme: d8_materialize
 region: footer_right
 weight: null
 provider: null
-plugin: 'block_content:27b82681-ca9d-4c96-a947-71bba8bec6d7'
+plugin: 'block_content:0e9ab122-a6f2-4559-b214-20b24acca58d'
 settings:
-  id: 'block_content:27b82681-ca9d-4c96-a947-71bba8bec6d7'
+  id: 'block_content:0e9ab122-a6f2-4559-b214-20b24acca58d'
   label: 'Social Media'
   provider: block_content
   label_display: '0'
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
+visibility: {  }
