@@ -1,23 +1,23 @@
-uuid: 1f97db8e-5035-450c-af08-8f03df3c36eb
+uuid: ceac819b-f7ff-49d2-b600-0cd2fd3b940e
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:298d9867-b2d9-4a6d-b200-e64571591f0a'
+    - 'block_content:basic:aaaac677-1ae1-4708-8905-5c7105673ac0'
   module:
     - block_content
     - system
   theme:
     - d8_materialize
-id: ubicacion
+id: suscribedrupalcamp
 theme: d8_materialize
 region: content
-weight: -6
+weight: -5
 provider: null
-plugin: 'block_content:298d9867-b2d9-4a6d-b200-e64571591f0a'
+plugin: 'block_content:aaaac677-1ae1-4708-8905-5c7105673ac0'
 settings:
-  id: 'block_content:298d9867-b2d9-4a6d-b200-e64571591f0a'
-  label: Ubicación
+  id: 'block_content:aaaac677-1ae1-4708-8905-5c7105673ac0'
+  label: 'Suscribe Drupal Camp'
   provider: block_content
   label_display: '0'
   status: true
