@@ -399,3 +399,39 @@ footer.page-footer {
   }
 }
 
+
+#block-suscribedrupalcamp{
+  text-align: center;
+  background: #1c192b;
+  padding: 100px 0;
+  h3{
+    font-weight: bold;
+    color: #5AAED4;
+  }
+  label{
+    color: #fff;
+    &.active{
+      color: #FFF;
+    }
+  }
+  input{
+    color: #FFF;
+    border-color: #FFF;
+    &.active{
+      color: #FFF;
+    }
+  }
+  i{
+    color: #FFF;
+    &.active{
+      color: #FFF;
+    }
+  }
+  .mc-field-group{
+    display: inline-block;
+    width: 60%;
+  }
+  .clear{
+    display: inline-block;
+  }
+}
