@@ -1,50 +1,75 @@
-jQuery(document).ready(function() {
-    jQuery('.button-collapse').sideNav();
-    jQuery('.parallax').parallax();
+(function ($) {
+    'use strict';
 
-    // Sticky Navigation.
-    jQuery(window).scroll(function() {
-        var topnav = jQuery('.site-logo img').position();
-        var topdistance = topnav.top
-        var scroll = jQuery(window).scrollTop();
-        stickyNav(topdistance, scroll);
-    });
-    function stickyNav(t, s) {
-        if(t < s) {
-            //console.log('activate');
-            jQuery('.top-nav').addClass('sticky').removeClass('no-sticky');
-        } else if(s === 0) {
-            //console.log('deactivate');
-            jQuery('.top-nav').removeClass('sticky').addClass('no-sticky');
+    Drupal.behaviors.d8_materialize = {
+        attach: function (context, settings) {
+
+            $.fn.BodyReady = function() {
+                $('.fighter-camp img').delay(200).fadeTo(100, 1, function() {
+                    $('.date-camp img').each(function(i) {
+                        $(this).delay(100*i).fadeTo(200,1);
+                    });
+                });
+            };
+
+            $('body.path-frontpage').once('d8_materialize').BodyReady();
+
+            $('.parallax').once('d8_materialize').parallax();
+
+            var button_collapse = $('.button-collapse');
+
+            button_collapse.once('d8_materialize').sideNav();
+            button_collapse.click(function() {
+                var sideover = $('#sidenav-overlay').is(':visible');
+                if(sideover) {
+                    $('.top-nav').removeClass('sticky').addClass('no-sticky');
+                } else if(!sideover) {
+                    $('.top-nav').addClass('sticky').removeClass('no-sticky');
+                }
+            }).once('d8_materialize');
+
+            // Sticky Navigation.
+            $(window).scroll(function() {
+                var topnav = $('.site-logo img').position();
+                var topdistance = topnav.top
+                var scroll = $(window).scrollTop();
+                stickyNav(topdistance, scroll);
+            });
+            function stickyNav(t, s) {
+                if(t < s) {
+                    $('.top-nav').addClass('sticky').removeClass('no-sticky');
+                } else if(s === 0) {
+                    $('.top-nav').removeClass('sticky').addClass('no-sticky');
+                }
+            }
+
+            // Backwards counter.
+            var origin = moment("2016-04-07 09:00:00", "YYYY-MM-DD HH:mm:ss");
+            var daysObject = $('.days-counter');
+            var hoursObject = $('.hours-counter');
+            var minutesObject =$('.minutes-counter');
+            var secondsObject = $('.second-counter');
+            function calculateTime() {
+                var days = moment().diff(origin, 'days');
+                var hours = moment().diff(origin, 'hours');
+                hours = hours-(days*24);
+
+                var minutes = moment().diff(origin, 'minutes');
+                minutes = minutes-(days*1440)-(hours*60);
+
+                var seconds = moment().diff(origin, 'seconds');
+                seconds -= (days*86400);
+                seconds -= (hours*3600);
+                seconds -= (minutes*60);
+
+                daysObject.text(-(days));
+                hoursObject.text(-(hours));
+                minutesObject.text(-(minutes));
+                secondsObject.text(-(seconds));
+            }
+            setInterval(function() {
+                calculateTime();
+            }, 1000);
         }
     }
-
-    // Backwards counter.
-    origin = moment("2016-04-07 09:00:00", "YYYY-MM-DD HH:mm:ss");
-    daysObject = jQuery('.days-counter');
-    hoursObject = jQuery('.hours-counter');
-    minutesObject = jQuery('.minutes-counter');
-    secondsObject = jQuery('.second-counter');
-    function calculateTime() {
-        days = moment().diff(origin, 'days');
-        hours = moment().diff(origin, 'hours');
-        hours = hours-(days*24);
-
-        minutes = moment().diff(origin, 'minutes');
-        minutes = minutes-(days*1440)-(hours*60);
-
-        seconds = moment().diff(origin, 'seconds');
-        seconds -= (days*86400);
-        seconds -= (hours*3600);
-        seconds -= (minutes*60);
-
-        daysObject.text(-(days));
-        hoursObject.text(-(hours));
-        minutesObject.text(-(minutes));
-        secondsObject.text(-(seconds));
-    }
-    setInterval(function() {
-        calculateTime();
-    }, 1000);
-
-});
+})(jQuery);
