@@ -19,15 +19,13 @@ jQuery(document).ready(function() {
         }
     }
 
-
     // Backwards counter.
     origin = moment("2016-04-07 09:00:00", "YYYY-MM-DD HH:mm:ss");
-    daysObject = document.getElementsByClassName('days-counter');
-    hoursObject = document.getElementsByClassName('hours-counter');
-    minutesObject = document.getElementsByClassName('minutes-counter');
-    secondsObject = document.getElementsByClassName('second-counter');
+    daysObject = jQuery('.days-counter');
+    hoursObject = jQuery('.hours-counter');
+    minutesObject = jQuery('.minutes-counter');
+    secondsObject = jQuery('.second-counter');
     function calculateTime() {
-
         days = moment().diff(origin, 'days');
         hours = moment().diff(origin, 'hours');
         hours = hours-(days*24);
@@ -40,16 +38,13 @@ jQuery(document).ready(function() {
         seconds -= (hours*3600);
         seconds -= (minutes*60);
 
-        daysObject[0].innerText = -(days);
-        hoursObject[0].innerText = -(hours);
-        minutesObject[0].innerText = -(minutes);
-        secondsObject[0].innerText = -(seconds);
-
+        daysObject.text(-(days));
+        hoursObject.text(-(hours));
+        minutesObject.text(-(minutes));
+        secondsObject.text(-(seconds));
     }
     setInterval(function() {
         calculateTime();
     }, 1000);
-
-
 
 });
