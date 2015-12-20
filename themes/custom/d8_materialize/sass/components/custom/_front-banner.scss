@@ -16,6 +16,10 @@
   color: rgb(90, 174, 212);
   text-shadow: 1px 2px 2px rgb(204, 204, 204);
 }
+.block-acerca + div strong {
+  color: blue;
+  font-weight: 600;
+}
 .block-acerca .title {
   @media #{$medium-and-up}{
     margin-left: -1em;
