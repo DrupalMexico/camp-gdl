@@ -1,12 +1,9 @@
 $custom-color: color("teal", "lighten-2");
 html {
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 .page-title {
   @extend .container;
-}
-.mdi-navigation-menu:before {
-  
 }
 #search-block-form {
   .input-field {
@@ -156,7 +153,7 @@ nav .button-collapse {
       padding: 5px 15px;
     }
     .nav-wrapper {
-      top: 0px;
+      top: 0;
     }
     .site-logo {
       img {
@@ -400,7 +397,7 @@ footer.page-footer {
 }
 
 
-#block-suscribedrupalcamp{
+#block-suscribedrupalcamp {
   text-align: center;
   background: #1c192b;
   padding: 100px 0;
@@ -421,7 +418,7 @@ footer.page-footer {
       color: #FFF;
     }
   }
-  i{
+  i {
     color: #FFF;
     &.active{
       color: #FFF;
@@ -434,4 +431,17 @@ footer.page-footer {
   .clear{
     display: inline-block;
   }
+}
+i.fa-envelope {
+  margin-top: 10px;
+}
+footer.page-footer {
+  .footer-copyright {
+    height: auto;
+  }
+}
+#block-poweredbypantheon {
+ p {
+   margin-bottom: 0;
+ }
 }
