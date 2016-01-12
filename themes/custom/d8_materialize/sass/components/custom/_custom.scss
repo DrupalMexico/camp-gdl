@@ -355,6 +355,7 @@ footer.page-footer {
 #block-counter {
   background: #d1d3d5;
   padding: 100px 0;
+  border-bottom: 1px solid #AAA;
 }
 .home-counter {
   background: #d1d3d5;
@@ -366,6 +367,7 @@ footer.page-footer {
       font-size: 30px;
       font-weight: bold;
       text-align: center;
+      text-shadow: 1px 1px 1px #218FED;
     }
   }
 }
@@ -377,6 +379,7 @@ footer.page-footer {
     color: #FFF;
     width: 25%;
     text-align: center;
+    text-shadow: 1px 1px black;
   }
 }
 

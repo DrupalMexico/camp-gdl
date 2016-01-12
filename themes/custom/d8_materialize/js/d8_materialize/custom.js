@@ -72,4 +72,14 @@
             }, 1000);
         }
     }
+
+    $(document).ready(function() {
+      $('.frontnavigation li > a').click(function() {
+        var $this = $(this).attr('rel');
+        $('html, body').animate({
+          scrollTop: $($this).offset().top - 180
+        }, 1000);
+      });
+    }); // document.ready
+
 })(jQuery);
