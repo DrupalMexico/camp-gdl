@@ -10426,11 +10426,14 @@ nav .button-collapse {
   -webkit-transition: all 500ms;
   transition: all 500ms; }
 
+.path-frontpage .top-nav {
+  background-color: transparent; }
+
 .top-nav {
   float: left;
   height: 110px;
   color: #39434C;
-  background-color: transparent;
+  background-color: #1D597D;
   box-shadow: none;
   -webkit-transition: all 500ms;
   transition: all 500ms; }
