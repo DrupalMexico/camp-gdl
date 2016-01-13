@@ -354,8 +354,12 @@ footer.page-footer {
 // Backward counter.
 #block-counter {
   background: #d1d3d5;
-  padding: 100px 0;
+  padding: 60px 0;
   border-bottom: 1px solid #AAA;
+  .title {
+    color: #66CEF5;
+    text-shadow: 1px 1px 1px #3C9EF2;
+  }
 }
 .home-counter {
   background: #d1d3d5;
@@ -395,6 +399,10 @@ footer.page-footer {
       width: 33%;
       float: left;
       text-align: center;
+      @media #{$small-and-down} {
+        width: 100%;
+        margin: 1em auto;
+      }
     }
   }
 }

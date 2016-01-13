@@ -40,6 +40,9 @@
   background-repeat: no-repeat;
   background-position: 50% center;
   background-size: 75% 100%;
+  @media #{$small-and-down} {
+    background-size: 150% 100%;
+  }
 }
 .date-camp {
   text-align: center;

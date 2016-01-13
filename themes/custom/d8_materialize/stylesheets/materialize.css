@@ -10588,8 +10588,11 @@ footer.page-footer .menu--footer a {
 
 #block-counter {
   background: #d1d3d5;
-  padding: 100px 0;
+  padding: 60px 0;
   border-bottom: 1px solid #AAA; }
+  #block-counter .title {
+    color: #66CEF5;
+    text-shadow: 1px 1px 1px #3C9EF2; }
 
 .home-counter {
   background: #d1d3d5; }
@@ -10629,6 +10632,10 @@ footer.page-footer .menu--footer a {
     width: 33%;
     float: left;
     text-align: center; }
+    @media only screen and (max-width: 600px) {
+      #block-views-block-organizadores-block-1 .view-content .views-row {
+        width: 100%;
+        margin: 1em auto; } }
 
 #block-suscribedrupalcamp {
   text-align: center;
@@ -10707,6 +10714,9 @@ footer.page-footer .footer-copyright {
   background-repeat: no-repeat;
   background-position: 50% center;
   background-size: 75% 100%; }
+  @media only screen and (max-width: 600px) {
+    .agave {
+      background-size: 150% 100%; } }
 
 .date-camp {
   text-align: center;
