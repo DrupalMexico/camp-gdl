@@ -6,7 +6,7 @@
   background: radial-gradient( circle, #3091B9, #194B6E);
 }
 .fighter-camp img {
-  @include transition(all .5s)
+  @include transition(all .5s);
   opacity: 0;
   max-width: 100%;
 }

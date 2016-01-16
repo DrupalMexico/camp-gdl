@@ -7,9 +7,11 @@ core: 8.x
 version: 1.0
 
 libraries:
+  - d8_materialize/open-sans
   - d8_materialize/materialize
+  - d8_materialize/d8_materialize
   - d8_materialize/moment
-  - d8_materialize/d8_materialize_custom
+
 
 stylesheets-remove:
   - core/assets/vendor/jquery.ui/themes/base/core.css

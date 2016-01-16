@@ -1,24 +1,31 @@
 materialize:
-  version: 1.0
+  version: 0.97.5
   header: true
   css:
     theme:
-      stylesheets/materialize.css: { scope: Footer }
+      css/materialize.css: { scope: Footer }
   js:
     js/bin/materialize.js: {}
+  dependencies:
+      - core/jquery
+      - core/jquery.once
+      - core/drupal
 
+# TODO include in homepage only.
 moment:
   version: 1.0
   header: false
   js:
     js/vendor/moment.js: { scope: Footer }
 
-d8_materialize_custom:
+d8_materialize:
   version: 1.0
   header: true
   js:
-    js/d8_materialize/custom.js: { scope: Footer }
-  dependencies:
-    - core/jquery
-    - core/jquery.once
-    - core/drupal
+    js/custom/custom.js: { scope: Footer }
+
+open-sans:
+  version: VERSION
+  css:
+    theme:
+      css/components/custom/open_sans/open-sans.css: {}
