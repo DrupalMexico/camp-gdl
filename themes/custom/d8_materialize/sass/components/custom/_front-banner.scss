@@ -1,6 +1,9 @@
 /**
 * Frontpage Banner & Blocks
 */
+
+@import "mixins";
+
 .camp-gdl-front {
   background-position: center center;
   background: radial-gradient( circle, #3091B9, #194B6E);
@@ -34,8 +37,9 @@
     max-height: 590px;
   }
 }
+
 .agave {
-  background-image: url("../images/custom/agave.png");
+  background-image: url("../../../images/custom/agave.png");
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% center;

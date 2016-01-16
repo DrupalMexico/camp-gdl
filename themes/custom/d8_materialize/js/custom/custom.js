@@ -1,8 +1,6 @@
 (function ($) {
     'use strict';
 
-    console.log('Hello World');
-
     Drupal.behaviors.d8_materialize = {
         attach: function (context, settings) {
 
@@ -46,32 +44,37 @@
             }
 
             // Backwards counter.
-            var origin = moment("2016-04-07 09:00:00", "YYYY-MM-DD HH:mm:ss");
-            var daysObject = $('.days-counter');
-            var hoursObject = $('.hours-counter');
-            var minutesObject =$('.minutes-counter');
-            var secondsObject = $('.second-counter');
-            function calculateTime() {
-                var days = moment().diff(origin, 'days');
-                var hours = moment().diff(origin, 'hours');
-                hours = hours-(days*24);
+            if (typeof(moment) != "undefined") {
+                var origin = moment("2016-04-07 09:00:00", "YYYY-MM-DD HH:mm:ss");
+                var daysObject = $('.days-counter');
+                var hoursObject = $('.hours-counter');
+                var minutesObject = $('.minutes-counter');
+                var secondsObject = $('.second-counter');
 
-                var minutes = moment().diff(origin, 'minutes');
-                minutes = minutes-(days*1440)-(hours*60);
+                function calculateTime() {
+                    var days = moment().diff(origin, 'days');
+                    var hours = moment().diff(origin, 'hours');
+                    hours = hours - (days * 24);
 
-                var seconds = moment().diff(origin, 'seconds');
-                seconds -= (days*86400);
-                seconds -= (hours*3600);
-                seconds -= (minutes*60);
+                    var minutes = moment().diff(origin, 'minutes');
+                    minutes = minutes - (days * 1440) - (hours * 60);
 
-                daysObject.text(-(days));
-                hoursObject.text(-(hours));
-                minutesObject.text(-(minutes));
-                secondsObject.text(-(seconds));
+                    var seconds = moment().diff(origin, 'seconds');
+                    seconds -= (days * 86400);
+                    seconds -= (hours * 3600);
+                    seconds -= (minutes * 60);
+
+                    daysObject.text(-(days));
+                    hoursObject.text(-(hours));
+                    minutesObject.text(-(minutes));
+                    secondsObject.text(-(seconds));
+                }
+
+                setInterval(function () {
+                    calculateTime();
+                }, 1000);
             }
-            setInterval(function() {
-                calculateTime();
-            }, 1000);
+            // End timer.
         }
     }
 
