@@ -20,6 +20,9 @@ moment:
 d8_materialize:
   version: 1.0
   header: true
+  css:
+    theme:
+      css/components/custom/d8_materialize.css: {}
   js:
     js/custom/custom.js: { scope: Footer }
 
@@ -27,5 +30,4 @@ open-sans:
   version: VERSION
   css:
     theme:
-      css/components/custom/d8_materialize: {}
       css/components/custom/open_sans/open-sans.css: {}

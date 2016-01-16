@@ -1,14 +1,6 @@
 @import "../color";
 @import "../variables";
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-
+@import "mixins";
 
 $custom-color: color("blue", "lighten-2");
 html {
@@ -250,6 +242,7 @@ li.menu-item.level-1 {
 
 // Footer
 footer.page-footer {
+  background: #1D597D;
   .menu--footer {
     a {
       color: #FFF;

@@ -1819,8 +1819,10 @@ li.menu-item.level-1 {
     width: 30%;
     float: right; } }
 
-footer.page-footer .menu--footer a {
-  color: #FFF; }
+footer.page-footer {
+  background: #1D597D; }
+  footer.page-footer .menu--footer a {
+    color: #FFF; }
 
 .description {
   margin-bottom: 30px;
@@ -2029,7 +2031,7 @@ footer.page-footer .footer-copyright {
     max-height: 590px; }
 
 .agave {
-  background-image: url("../images/custom/agave.png");
+  background-image: url("../../../images/custom/agave.png");
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% center;
