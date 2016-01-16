@@ -30,6 +30,9 @@
   height: auto; 
   overflow: hidden;
   margin: 1em 0;
+  img {
+    max-height: 590px;
+  }
 }
 .agave {
   background-image: url("../images/custom/agave.png");
@@ -37,6 +40,9 @@
   background-repeat: no-repeat;
   background-position: 50% center;
   background-size: 75% 100%;
+  @media #{$small-and-down} {
+    background-size: 150% 100%;
+  }
 }
 .date-camp {
   text-align: center;

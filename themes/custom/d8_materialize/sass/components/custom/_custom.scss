@@ -118,12 +118,15 @@ nav .button-collapse {
 
 
 }
+.path-frontpage .top-nav {
+  background-color: transparent;
+}
 
 .top-nav {
   float: left;
   height: 110px;
   color: #39434C;
-  background-color: transparent;
+  background-color: #1D597D;
   box-shadow: none;
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
@@ -144,7 +147,6 @@ nav .button-collapse {
     height: 75px;
     z-index: 90;
     opacity: .95;
-    //border-bottom: 1px solid #ccc;
     background-color: #1D597D;
     .site-name {
       display: none;
@@ -354,7 +356,12 @@ footer.page-footer {
 // Backward counter.
 #block-counter {
   background: #d1d3d5;
-  padding: 100px 0;
+  padding: 60px 0;
+  border-bottom: 1px solid #AAA;
+  .title {
+    color: #66CEF5;
+    text-shadow: 1px 1px 1px #3C9EF2;
+  }
 }
 .home-counter {
   background: #d1d3d5;
@@ -366,6 +373,7 @@ footer.page-footer {
       font-size: 30px;
       font-weight: bold;
       text-align: center;
+      text-shadow: 1px 1px 1px #218FED;
     }
   }
 }
@@ -377,6 +385,7 @@ footer.page-footer {
     color: #FFF;
     width: 25%;
     text-align: center;
+    text-shadow: 1px 1px black;
   }
 }
 
@@ -392,6 +401,10 @@ footer.page-footer {
       width: 33%;
       float: left;
       text-align: center;
+      @media #{$small-and-down} {
+        width: 100%;
+        margin: 1em auto;
+      }
     }
   }
 }

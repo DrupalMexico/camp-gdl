@@ -74,4 +74,21 @@
             }, 1000);
         }
     }
+
+    $(document).ready(function() {
+      $('.frontnavigation li > a').click(function() { // Menu scrolltop effect
+        var $this = $(this).attr('rel');
+        $('html, body').animate({
+          scrollTop: $($this).offset().top - 180
+        }, 1000);
+      });
+
+      if ($(window).width() <= 600) {
+        $('.home-counter .labels-container .label').each(function() {
+          var t = $(this).text().slice(0, 1);
+          $(this).text(t);
+        });
+      }
+    }); // document.ready
+
 })(jQuery);
