@@ -10622,6 +10622,9 @@ footer.page-footer .footer-copyright {
 #block-poweredbypantheon p {
   margin-bottom: 0; }
 
+#map {
+  height: 300px; }
+
 /**
 * Frontpage Banner & Blocks
 */

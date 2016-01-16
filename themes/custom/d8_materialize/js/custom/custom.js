@@ -1,6 +1,8 @@
 (function ($) {
     'use strict';
 
+    console.log('Hello World');
+
     Drupal.behaviors.d8_materialize = {
         attach: function (context, settings) {
 

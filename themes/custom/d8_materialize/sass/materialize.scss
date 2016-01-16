@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 // Mixins
-@import "components/prefixer";
+// @import "components/prefixer";
 @import "components/mixins";
 @import "components/color";
 
@@ -15,14 +15,9 @@
 @import "components/global";
 @import "components/icons-material-design";
 @import "components/grid";
-
-// breakpoint
-@import "vendor/breakpoint/stylesheets/breakpoint";
-
 @import "components/navbar";
-//@import "components/roboto";
+@import "components/roboto";
 @import "components/typography";
-@import "../font/font-awesome-4.5.0/scss/font-awesome";
 @import "components/cards";
 @import "components/toast";
 @import "components/tabs";
@@ -39,14 +34,7 @@
 @import "components/sideNav";
 @import "components/preloader";
 @import "components/slider";
+//@import "components/carousel";
 @import "components/date_picker/default.scss";
 @import "components/date_picker/default.date.scss";
 @import "components/date_picker/default.time.scss";
-
-// Drupal normalize.
-@import "components/d8md_normalize/d8md_toolbar";
-
-// Custom Styling.
-@import "components/custom/custom";
-@import "components/custom/front-banner";
-@import "components/custom/open_sans/open-sans";
