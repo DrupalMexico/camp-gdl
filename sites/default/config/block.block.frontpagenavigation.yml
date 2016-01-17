@@ -1,23 +1,23 @@
-uuid: 24a85a2a-083d-4f1b-874d-77cab7c3192e
+uuid: 005a2b82-989a-49a0-8309-094ac4412f8d
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:746058fe-3a67-40c4-a212-18c4be80a8fc'
+    - 'block_content:basic:0435c240-793f-48db-a107-7f9600f541b1'
   module:
     - block_content
     - system
   theme:
     - d8_materialize
-id: counter
+id: frontpagenavigation
 theme: d8_materialize
-region: content
-weight: -7
+region: header_right
+weight: null
 provider: null
-plugin: 'block_content:746058fe-3a67-40c4-a212-18c4be80a8fc'
+plugin: 'block_content:0435c240-793f-48db-a107-7f9600f541b1'
 settings:
-  id: 'block_content:746058fe-3a67-40c4-a212-18c4be80a8fc'
-  label: Counter
+  id: 'block_content:0435c240-793f-48db-a107-7f9600f541b1'
+  label: 'Front page navigation'
   provider: block_content
   label_display: '0'
   status: true
