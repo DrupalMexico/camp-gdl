@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:746058fe-3a67-40c4-a212-18c4be80a8fc'
   module:
     - block_content
+    - system
   theme:
     - d8_materialize
 id: counter
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
