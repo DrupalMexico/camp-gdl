@@ -25,9 +25,9 @@ function campgdl_tweaks_help($route_name, RouteMatchInterface $route_match) {
 
 /**
  * Implements hook_form_FORM_ID_alter().
- * Form ID: node_session_form
+ * Form ID: node_form
  */
-function campgdl_tweaks_form_node_session_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function campgdl_tweaks_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if (isset($form['field_status'])) {
     $form['field_status']['#access'] = \Drupal::currentUser()->hasPermission('edit session status field');
   }
