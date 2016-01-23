@@ -12,7 +12,7 @@ dependencies:
 id: frontpagenavigation
 theme: d8_materialize
 region: header_right
-weight: null
+weight: -16
 provider: null
 plugin: 'block_content:0435c240-793f-48db-a107-7f9600f541b1'
 settings:

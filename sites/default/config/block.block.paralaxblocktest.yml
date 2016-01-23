@@ -12,7 +12,7 @@ dependencies:
 id: paralaxblocktest
 theme: d8_materialize
 region: '-1'
-weight: -11
+weight: -13
 provider: null
 plugin: 'block_content:f0893a89-afb4-4998-8400-f9898b1e76fa'
 settings:
