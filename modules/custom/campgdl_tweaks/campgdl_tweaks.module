@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains campgdl_tweaks.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function campgdl_tweaks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the campgdl_tweaks module.
+    case 'help.page.campgdl_tweaks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Camp GDL modifications and tweaks.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Form ID: node_session_form
+ */
+function campgdl_tweaks_form_node_session_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (isset($form['field_status'])) {
+    $form['field_status']['#access'] = \Drupal::currentUser()->hasPermission('edit session status field');
+  }
+}
