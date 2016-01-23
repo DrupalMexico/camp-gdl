@@ -7,7 +7,7 @@
             $.fn.BodyReady = function () {
                 $('.fighter-camp img').delay(200).fadeTo(100, 1, function () {
                     $('.date-camp img').each(function (i) {
-                        $(i).delay(100 * i).fadeTo(200, 1);
+                        $($this).delay(100 * i).fadeTo(200, 1);
                     });
                 });
             };
