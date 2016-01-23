@@ -1,6 +1,6 @@
 uuid: 82b56ad6-5b83-4e0e-b506-6a0d5c0eabef
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.main_slider
@@ -8,11 +8,11 @@ dependencies:
     - system
     - views
   theme:
-    - camp_gdl
+    - d8_materialize
 id: views_block__main_slider_block_1_2
-theme: camp_gdl
-region: header
-weight: -8
+theme: d8_materialize
+region: '-1'
+weight: -12
 provider: null
 plugin: 'views_block:main_slider-block_1'
 settings:

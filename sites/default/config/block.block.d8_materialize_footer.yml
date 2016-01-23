@@ -11,7 +11,7 @@ dependencies:
 id: d8_materialize_footer
 theme: d8_materialize
 region: '-1'
-weight: -12
+weight: -14
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
