@@ -89,6 +89,9 @@
                 }, 1000);
             }
             // End timer.
+
+            // Select form items.
+            $('select', context).material_select();
         }
     }
 
