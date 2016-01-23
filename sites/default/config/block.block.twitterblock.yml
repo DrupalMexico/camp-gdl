@@ -1,0 +1,36 @@
+uuid: e3ce817a-d061-41af-ad02-2cdb339fb777
+langcode: en
+status: true
+dependencies:
+  module:
+    - twitter_block
+  theme:
+    - d8_materialize
+id: twitterblock
+theme: d8_materialize
+region: footer_right
+weight: -14
+provider: null
+plugin: twitter_block
+settings:
+  id: twitter_block
+  label: 'Twitter feed'
+  provider: twitter_block
+  label_display: visible
+  widget_id: '688161034054414336'
+  theme: ''
+  link_color: 5aaed4
+  width: ''
+  height: '400'
+  chrome:
+    nofooter: nofooter
+    noborders: noborders
+    noheader: '0'
+    noscrollbar: '0'
+    transparent: '0'
+  border_color: d1d3d5
+  language: ''
+  tweet_limit: ''
+  related: ''
+  polite: polite
+visibility: {  }
