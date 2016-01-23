@@ -4,12 +4,26 @@
     Drupal.behaviors.d8_materialize = {
         attach: function (context, settings) {
 
-            $.fn.BodyReady = function () {
-                $('.fighter-camp img').delay(200).fadeTo(100, 1, function () {
-                    $('.date-camp img').each(function (i) {
-                        $($this).delay(100 * i).fadeTo(200, 1);
-                    });
+            function animateDateImages() {
+                var images = jQuery('.date-camp img');
+                jQuery.each(images, function (i , v) {
+                    jQuery(v).delay(100 * i).fadeTo(200, 1);
                 });
+            }
+
+            function animateFireCamp() {
+                jQuery('.fighter-camp img').delay(200).fadeTo(100, 1);
+            }
+
+            function homePageAnimation() {
+                animateFireCamp();
+                setTimeout(function() {
+                    animateDateImages();
+                }, 500);
+            }
+
+            $.fn.BodyReady = function () {
+                homePageAnimation();
             };
 
             $('body.path-frontpage').once('d8_materialize').BodyReady();
