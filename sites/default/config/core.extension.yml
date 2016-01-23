@@ -42,6 +42,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  twitter_block: 0
   update: 0
   user: 0
   views_ui: 0
@@ -52,3 +53,4 @@ theme:
   bartik: 0
   seven: 0
   d8_materialize: 0
+  stable: 0
