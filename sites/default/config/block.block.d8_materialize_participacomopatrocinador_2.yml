@@ -12,7 +12,7 @@ dependencies:
 id: d8_materialize_participacomopatrocinador_2
 theme: d8_materialize
 region: '-1'
-weight: -9
+weight: -10
 provider: null
 plugin: 'block_content:65ef4a58-18a3-4b5c-9d06-6f49aea6f081'
 settings:

@@ -10,7 +10,7 @@ dependencies:
 id: d8_materialize_search
 theme: d8_materialize
 region: '-1'
-weight: -8
+weight: -9
 provider: null
 plugin: search_form_block
 settings:

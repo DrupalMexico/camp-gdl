@@ -11,7 +11,7 @@ dependencies:
 id: d8_materialize_main_menu
 theme: d8_materialize
 region: '-1'
-weight: -10
+weight: -11
 provider: null
 plugin: 'system_menu_block:main'
 settings:

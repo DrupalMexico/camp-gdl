@@ -1,17 +1,17 @@
 uuid: e5bbe5b9-055f-460b-8105-5b8d719a3e02
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.sponsors
   module:
     - views
   theme:
-    - camp_gdl
+    - d8_materialize
 id: views_block__sponsors_block_1_2
-theme: camp_gdl
-region: content_bottom
-weight: -8
+theme: d8_materialize
+region: '-1'
+weight: -7
 provider: null
 plugin: 'views_block:sponsors-block_1'
 settings:

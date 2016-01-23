@@ -1,6 +1,6 @@
 uuid: ef5d725b-a64f-4311-a000-ea35948ea7aa
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:65ef4a58-18a3-4b5c-9d06-6f49aea6f081'
@@ -8,11 +8,11 @@ dependencies:
     - block_content
     - system
   theme:
-    - camp_gdl
+    - d8_materialize
 id: participacomopatrocinador_2
-theme: camp_gdl
-region: content
-weight: -7
+theme: d8_materialize
+region: '-1'
+weight: -1
 provider: null
 plugin: 'block_content:65ef4a58-18a3-4b5c-9d06-6f49aea6f081'
 settings:
