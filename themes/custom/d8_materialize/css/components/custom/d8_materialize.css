@@ -1986,6 +1986,9 @@ footer.page-footer .footer-copyright {
 #map {
   height: 300px; }
 
+.d8-local-tasks {
+  margin-top: 20px; }
+
 .toolbar nav {
   height: inherit;
   line-height: inherit;

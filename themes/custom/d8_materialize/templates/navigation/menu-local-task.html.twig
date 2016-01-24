@@ -14,4 +14,5 @@
  * @see template_preprocess_menu_local_task()
  */
 #}
-<li{{ attributes.addClass(is_active ? 'active').addClass('tab col') }}>{{ link }}</li>
+{#{{ kint(attributes) }}#}
+<a href="/{{ url }}" {{ attributes.addClass(is_active ? 'active' : 'btn-flat' ).addClass('waves-effect', 'waves-light', 'btn') }}>{{ link['#title'] }}</a>
