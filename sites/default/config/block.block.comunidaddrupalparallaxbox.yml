@@ -12,7 +12,7 @@ dependencies:
 id: comunidaddrupalparallaxbox
 theme: d8_materialize
 region: '-1'
-weight: -1
+weight: -16
 provider: null
 plugin: 'block_content:7d0fa7e4-5904-4342-9e3b-593c2b311da5'
 settings:

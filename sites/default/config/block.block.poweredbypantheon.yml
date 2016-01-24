@@ -10,8 +10,8 @@ dependencies:
     - d8_materialize
 id: poweredbypantheon
 theme: d8_materialize
-region: footer_bottom
-weight: -13
+region: footer_left
+weight: -15
 provider: null
 plugin: 'block_content:87412048-1e74-4b88-8409-9afb870ccbfc'
 settings:

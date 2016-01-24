@@ -12,7 +12,7 @@ dependencies:
 id: suscribedrupalcamp
 theme: d8_materialize
 region: content
-weight: -5
+weight: -8
 provider: null
 plugin: 'block_content:aaaac677-1ae1-4708-8905-5c7105673ac0'
 settings:

@@ -11,7 +11,7 @@ dependencies:
 id: views_block__organizadores_block_1
 theme: d8_materialize
 region: content
-weight: -4
+weight: -6
 provider: null
 plugin: 'views_block:organizadores-block_1'
 settings:
