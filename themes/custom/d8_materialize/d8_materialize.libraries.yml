@@ -31,3 +31,9 @@ open-sans:
   css:
     theme:
       css/components/custom/open_sans/open-sans.css: {}
+
+fontawesome:
+  version: 4.5
+  css:
+    theme:
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css: {}
