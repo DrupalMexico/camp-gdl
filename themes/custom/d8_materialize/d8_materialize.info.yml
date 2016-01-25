@@ -10,6 +10,7 @@ libraries:
   - d8_materialize/open-sans
   - d8_materialize/materialize
   - d8_materialize/d8_materialize
+  - d8_materialize/fontawesome
 
 stylesheets-remove:
   - core/assets/vendor/jquery.ui/themes/base/core.css
