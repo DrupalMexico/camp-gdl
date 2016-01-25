@@ -1,0 +1,21 @@
+uuid: f11e5583-527f-46f1-a005-5bf0e1c6821c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date
+    - node.type.training
+  module:
+    - datetime
+id: node.training.field_start_date
+field_name: field_start_date
+entity_type: node
+bundle: training
+label: 'Start date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
