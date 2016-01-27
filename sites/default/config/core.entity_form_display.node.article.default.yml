@@ -1,5 +1,5 @@
 uuid: c0487875-db26-41cd-be0f-15144453ad0c
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -46,6 +46,11 @@ content:
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
     settings: {  }
     third_party_settings: {  }
   path:

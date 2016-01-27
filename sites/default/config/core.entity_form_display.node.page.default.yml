@@ -1,5 +1,5 @@
 uuid: 44df0f49-9a97-40f5-a720-322af1d9b02f
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -24,6 +24,11 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
     settings: {  }
     third_party_settings: {  }
   path:

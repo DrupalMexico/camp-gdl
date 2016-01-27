@@ -3,7 +3,7 @@ keys:
   private: 6f5d3fe8f3185fe8374303d29d3e10bc
 fallback: 1
 languages_expected:
-  - ''
+  languageCode: es
 test_mode:
   enabled: false
   api_endpoint: dev.mollom.com
@@ -21,3 +21,4 @@ captcha:
     enabled: true
 _core:
   default_config_hash: 8uHhdqIc3ARJWLcZ_gKimtOymT0SRxGryuDcC6S5Vx4
+langcode: es

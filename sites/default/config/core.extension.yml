@@ -9,6 +9,7 @@ module:
   color: 0
   comment: 0
   config: 0
+  config_translation: 0
   contact: 0
   contextual: 0
   ctools: 0
@@ -25,7 +26,9 @@ module:
   history: 0
   image: 0
   kint: 0
+  language: 0
   link: 0
+  locale: 0
   menu_ui: 0
   mollom: 0
   node: 0
@@ -56,3 +59,4 @@ theme:
   seven: 0
   d8_materialize: 0
   stable: 0
+langcode: es

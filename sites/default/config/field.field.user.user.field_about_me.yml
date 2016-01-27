@@ -11,8 +11,8 @@ id: user.user.field_about_me
 field_name: field_about_me
 entity_type: user
 bundle: user
-label: 'About Me'
-description: ''
+label: Bio
+description: 'Información acerca de tí. ¿A que te dedicas? ¿Cómo conociste Drupal? Si estás proponiendo una charla esto ayuda mucho al proceso de selección.'
 required: false
 translatable: false
 default_value: {  }

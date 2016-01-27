@@ -1,5 +1,5 @@
 uuid: 60631ab3-038e-466b-a20a-1026a0e0604a
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -46,3 +46,4 @@ hidden:
   comment: true
   field_image: true
   field_tags: true
+  langcode: true

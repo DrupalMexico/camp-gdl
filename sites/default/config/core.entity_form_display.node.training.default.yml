@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.training.body
+    - field.field.node.training.field_end_date
+    - field.field.node.training.field_start_date
     - node.type.training
   module:
+    - datetime
     - path
     - text
 id: node.training.default
@@ -24,6 +27,21 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_end_date:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_start_date:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  langcode:
+    type: language_select
+    weight: 2
     settings: {  }
     third_party_settings: {  }
   path:

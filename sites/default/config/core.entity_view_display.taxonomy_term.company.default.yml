@@ -58,4 +58,5 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-hidden: {  }
+hidden:
+  langcode: true
