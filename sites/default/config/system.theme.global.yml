@@ -15,3 +15,4 @@ logo:
   path: 'public://drupal_camp_gdl_logo_0.png'
   url: ''
   use_default: false
+langcode: es

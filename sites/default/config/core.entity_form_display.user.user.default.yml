@@ -1,5 +1,5 @@
 uuid: 1447616e-56c1-4f05-9a00-e73f9b5ba11b
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -15,6 +15,7 @@ dependencies:
   module:
     - image
     - link
+    - path
     - text
     - user
 id: user.user.default
@@ -83,6 +84,11 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     type: image_image
     settings:

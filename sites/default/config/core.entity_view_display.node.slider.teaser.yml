@@ -21,3 +21,4 @@ hidden:
   field_caption: true
   field_link: true
   field_slider_image: true
+  langcode: true

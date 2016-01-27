@@ -32,3 +32,4 @@ hidden:
   field_slides: true
   field_status: true
   field_track: true
+  langcode: true
