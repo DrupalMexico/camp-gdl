@@ -1,10 +1,10 @@
-@import "../color";
-@import "../variables";
-@import "mixins";
-
 $custom-color: color("blue", "lighten-2");
+
 html {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4 {
+  font-weight: bold;
 }
 .page-title {
   @extend .container;
@@ -14,7 +14,6 @@ html {
     margin-top: 1em;
   }
 }
-
 
 .search-form,
 .search-block-form {

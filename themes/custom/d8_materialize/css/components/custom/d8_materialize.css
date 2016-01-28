@@ -1642,6 +1642,9 @@
 html {
   font-family: "Open Sans", Arial, Helvetica, sans-serif; }
 
+h1, h2, h3, h4 {
+  font-weight: bold; }
+
 #search-block-form .input-field {
   margin-top: 1em; }
 
