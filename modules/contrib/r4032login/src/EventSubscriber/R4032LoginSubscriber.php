@@ -8,9 +8,9 @@
 namespace Drupal\r4032login\EventSubscriber;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\Core\Routing\UrlGeneratorInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Routing\RedirectDestinationInterface;
+use Drupal\Core\Url;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -22,13 +22,6 @@ use Drupal\Component\Utility\Xss;
  * Redirect 403 to User Login event subscriber.
  */
 class R4032LoginSubscriber implements EventSubscriberInterface {
-
-  /**
-   * The url generator service.
-   *
-   * @var \Drupal\Core\Routing\UrlGeneratorInterface
-   */
-  protected $urlGenerator;
 
   /**
    * The configuration factory.
@@ -56,15 +49,12 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The configuration factory.
-   * @param \Drupal\Core\Routing\UrlGeneratorInterface $url_generator
-   *   The url generator service.
    * @param \Drupal\Core\Session\AccountInterface $current_user
    *   The current user.
    * @param \Drupal\Core\Routing\RedirectDestinationInterface $redirect_destination
    *   The redirect destination service.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, UrlGeneratorInterface $url_generator, AccountInterface $current_user, RedirectDestinationInterface $redirect_destination) {
-    $this->urlGenerator = $url_generator;
+  public function __construct(ConfigFactoryInterface $config_factory, AccountInterface $current_user, RedirectDestinationInterface $redirect_destination) {
     $this->configFactory = $config_factory;
     $this->currentUser = $current_user;
     $this->redirectDestination = $redirect_destination;
@@ -75,11 +65,12 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
    *
    * @param \Symfony\Component\HttpKernel\Event\GetResponseEvent $event
    *   The Event to process.
-   *
-   * @throws \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
-   *   Thrown when the access is denied and redirects to user login page.
    */
   public function onKernelException(GetResponseEvent $event) {
+    $exception = $event->getException();
+    if (!($exception instanceof AccessDeniedHttpException)) {
+      return;
+    }
     $config = $this->configFactory->get('r4032login.settings');
     $options = array();
     $options['query'] = $this->redirectDestination->getAsArray();
@@ -93,8 +84,9 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
         drupal_set_message(Xss::filterAdmin($message), $message_type);
       }
       // Handle redirection to the login form.
-      $login_path = $config->get('user_login_path');
-      $response = new RedirectResponse($this->urlGenerator->generateFromPath($login_path, $options), $code);
+      $login_route = $config->get('user_login_route');
+      $url = Url::fromRoute($login_route, array(), $options)->toString();
+      $response = new RedirectResponse($url, $code);
       $event->setResponse($response);
     }
     else {
@@ -102,12 +94,9 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
       $redirect = $config->get('redirect_authenticated_users_to');
       if ($redirect) {
         // Custom access denied page for logged in users.
-        $response = new RedirectResponse($this->urlGenerator->generateFromPath($redirect, $options), $code);
+        $url = Url::fromUserInput($redirect, $options)->toString();
+        $response = new RedirectResponse($url, $code);
         $event->setResponse($response);
-      }
-      else {
-        // Display the default access denied page.
-        throw new AccessDeniedHttpException();
       }
     }
   }
