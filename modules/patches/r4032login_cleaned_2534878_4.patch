@@ -1,0 +1,13 @@
+diff --git a/src/EventSubscriber/R4032LoginSubscriber.php b/src/EventSubscriber/R4032LoginSubscriber.php
+index 010dc9f..0063e17 100644
+--- a/src/EventSubscriber/R4032LoginSubscriber.php
++++ b/src/EventSubscriber/R4032LoginSubscriber.php
+@@ -80,4 +80,8 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
+    *   Thrown when the access is denied and redirects to user login page.
+    */
+   public function onKernelException(GetResponseEvent $event) {
++    $exception = $event->getException();
++    if (!($exception instanceof AccessDeniedHttpException)) {
++      return;
++    }
+     $config = $this->configFactory->get('r4032login.settings');
