@@ -9,7 +9,7 @@ dependencies:
 id: d8_materialize_powered
 theme: d8_materialize
 region: footer_left
-weight: -14
+weight: -15
 provider: null
 plugin: system_powered_by_block
 settings:
