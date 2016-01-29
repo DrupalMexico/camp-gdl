@@ -4,6 +4,8 @@
     Drupal.behaviors.d8_materialize = {
         attach: function (context, settings) {
 
+            // Homepage Animation.
+            /////////////////////
             function animateDateImages() {
                 var images = jQuery('.date-camp img');
                 jQuery.each(images, function (i , v) {
@@ -28,21 +30,8 @@
 
             $('body.path-frontpage').once('d8_materialize').BodyReady();
 
-            $('.parallax').once('d8_materialize').parallax();
-
-            var button_collapse = $('.button-collapse');
-
-            button_collapse.once('d8_materialize').sideNav();
-            button_collapse.click(function () {
-                var sideover = $('#sidenav-overlay').is(':visible');
-                if (sideover) {
-                    $('.top-nav').removeClass('sticky').addClass('no-sticky');
-                } else if (!sideover) {
-                    $('.top-nav').addClass('sticky').removeClass('no-sticky');
-                }
-            }).once('d8_materialize');
-
             // Sticky Navigation.
+            ////////////////////
             $(window).scroll(function () {
                 var topnav = $('.site-logo img').position();
                 var topdistance = topnav.top
@@ -56,6 +45,9 @@
                     $('.top-nav').removeClass('sticky').addClass('no-sticky');
                 }
             }
+
+            // Backwards counter.
+            ////////////////////
             function calculateTime() {
                 var days = moment().diff(origin, 'days');
                 var hours = moment().diff(origin, 'hours');
@@ -70,44 +62,64 @@
                 seconds -= (minutes * 60);
 
                 daysObject.text(-(days));
-                hoursObject.text(-(hours));
+                (hours == 1) ? hoursObject.text((hours)) : hoursObject.text(-(hours));
                 minutesObject.text(-(minutes));
                 secondsObject.text(-(seconds));
             }
 
-            // Backwards counter.
             var origin = moment("2016-04-07 09:00:00", "YYYY-MM-DD HH:mm:ss");
             var daysObject = $('.days-counter');
             var hoursObject = $('.hours-counter');
             var minutesObject = $('.minutes-counter');
             var secondsObject = $('.second-counter');
 
-
             if (typeof(moment) != "undefined") {
                 setInterval(function () {
                     calculateTime();
                 }, 1000);
             }
-            // End timer.
 
+            // Scroll Animation homepage.
+            ////////////////////////////
+            $('.path-frontpage .menu--main a', context).bind('click', function(event) {
+                if(event.currentTarget.hash) { // If current element has hash and its front page.
+                    event.preventDefault();
+                    $('html, body', context).animate({
+                        scrollTop: $(event.currentTarget.hash).offset().top - 180
+                    }, 1000);
+                }
+            });
+
+            // Materialize triggers.
+            ///////////////////////
             // Select form items.
             $('select', context).material_select();
+            $('.parallax').once('d8_materialize').parallax();
+
+            // Side navigation.
+            var button_collapse = $('.button-collapse');
+            button_collapse.once('d8_materialize').sideNav();
+            button_collapse.click(function () {
+                var sideover = $('#sidenav-overlay').is(':visible');
+                if (sideover) {
+                    $('.top-nav').removeClass('sticky').addClass('no-sticky');
+                } else if (!sideover) {
+                    $('.top-nav').addClass('sticky').removeClass('no-sticky');
+                }
+            }).once('d8_materialize');
+
         }
-    }
+    };
 
     $(document).ready(function () {
-        $('.frontnavigation li > a').click(function () { // Menu scrolltop effect
-            var $this = $(this).attr('rel');
-            $('html, body').animate({
-                scrollTop: $($this).offset().top - 180
-            }, 1000);
-        });
-
+        // Shorten the time letters for mobile.
+        ///////////////////////////////////////
         if ($(window).width() <= 600) {
             $('.home-counter .labels-container .label').each(function () {
                 var t = $(this).text().slice(0, 1);
                 $(this).text(t);
             });
         }
+
     }); // document.ready
 })(jQuery);
