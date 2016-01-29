@@ -9,7 +9,7 @@ dependencies:
 id: twitterblock
 theme: d8_materialize
 region: footer_right
-weight: -14
+weight: -17
 provider: null
 plugin: twitter_block
 settings:
