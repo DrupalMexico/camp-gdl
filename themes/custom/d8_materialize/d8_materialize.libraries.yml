@@ -30,7 +30,7 @@ open-sans:
   version: VERSION
   css:
     theme:
-      css/components/custom/open_sans/open-sans.css: {}
+      css/open-sans.css: {}
 
 fontawesome:
   version: 4.5

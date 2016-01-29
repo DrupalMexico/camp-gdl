@@ -1,17 +1,16 @@
 uuid: 005a2b82-989a-49a0-8309-094ac4412f8d
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:0435c240-793f-48db-a107-7f9600f541b1'
   module:
     - block_content
-    - system
   theme:
     - d8_materialize
 id: frontpagenavigation
 theme: d8_materialize
-region: header_right
+region: '-1'
 weight: -16
 provider: null
 plugin: 'block_content:0435c240-793f-48db-a107-7f9600f541b1'
@@ -23,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
+visibility: {  }
