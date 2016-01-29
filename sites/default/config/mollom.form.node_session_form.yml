@@ -1,0 +1,23 @@
+langcode: es
+id: node_session_form
+uuid: e888eac1-5436-4114-905a-903d467d7060
+label: 'formulario Sesión'
+mode: '2'
+enabled_fields:
+  - 'title][0][value'
+  - revision_log
+  - body
+checks:
+  - spam
+strictness: normal
+unsure: captcha
+discard: '1'
+moderation: null
+mapping:
+  author_name: name
+  context_id: nid
+  post_title: 'title][0][value'
+  post_id: nid
+module: node
+entity: node
+bundle: session

@@ -1,0 +1,25 @@
+langcode: es
+id: user_register_form
+uuid: 02c8d67f-2a26-410f-b306-6d80c0f0f83d
+label: 'Formulario de registro de usuario'
+mode: '2'
+enabled_fields:
+  - name
+  - mail
+  - timezone
+  - init
+  - field_full_name
+  - field_job_title
+checks:
+  - spam
+strictness: normal
+unsure: captcha
+discard: '1'
+moderation: null
+mapping:
+  author_name: name
+  author_mail: mail
+  post_id: uid
+module: user
+entity: user
+bundle: user
