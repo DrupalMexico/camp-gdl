@@ -1,0 +1,174 @@
+diff --git a/config/install/r4032login.settings.yml b/config/install/r4032login.settings.yml
+index 9d5dbfb..808043e 100644
+--- a/config/install/r4032login.settings.yml
++++ b/config/install/r4032login.settings.yml
+@@ -2,6 +2,6 @@ display_denied_message: true
+ access_denied_message: 'Access denied. You must log in to view this page.'
+ access_denied_message_type: 'error'
+ redirect_authenticated_users_to: ''
+-user_login_path: 'user/login'
++user_login_route: 'user.login'
+ default_redirect_code: '302'
+ match_noredirect_pages: ''
+diff --git a/config/schema/r4032login.schema.yml b/config/schema/r4032login.schema.yml
+index f135140..020246b 100644
+--- a/config/schema/r4032login.schema.yml
++++ b/config/schema/r4032login.schema.yml
+@@ -24,9 +24,9 @@ r4032login.settings:
+     redirect_authenticated_users_to:
+       type: label
+       label: 'Redirect authenticated users to'
+-    user_login_path:
+-      type: path
+-      label: 'user/login'
++    user_login_route:
++      type: string
++      label: 'user.login'
+     default_redirect_code:
+       type: mapping
+       label: 'HTTP redirect code'
+diff --git a/r4032login.module b/r4032login.module
+index d02dbb2..2e1b680 100644
+--- a/r4032login.module
++++ b/r4032login.module
+@@ -65,15 +65,19 @@ function r4032login_form_system_site_information_settings_alter(&$form, FormStat
+     '#type' => 'textfield',
+     '#weight' => 8,
+     '#title' => t("Redirect authenticated users to"),
+-    '#description' => t('If an authenticated user tries to access a page they can not, redirect them to the given page. Use &lt;front&gt; for the front page, leave blank for a default access denied page.'),
++    '#description' => t('If an authenticated user tries to access a page they can not, redirect them to the given page. Use the beginning slash, ie: /node/1. Use &lt;front&gt; for the front page, leave blank for a default access denied page.'),
+     '#default_value' => $config->get('redirect_authenticated_users_to'),
+   );
+-  $form['error_page']['r4032login']['r4032login_user_login_path'] = array(
+-    '#type' => 'textfield',
++  $form['error_page']['r4032login']['r4032login_user_login_route'] = array(
++    '#type' => 'select',
+     '#weight' => 9,
+-    '#title' => t("Path to user login form"),
+-    '#description' => t('The path to the user login form. Omit the beginning slash, ie: user/login.'),
+-    '#default_value' => $config->get('user_login_path'),
++    '#title' => t("User login form"),
++    '#description' => t('Choose which form to present to the users.'),
++    '#default_value' => $config->get('user_login_route'),
++    '#options' => array(
++      'user.login' => 'User login form',
++      'user.register' => 'User register form',
++    ),
+   );
+   $form['error_page']['r4032login']['r4032login_default_redirect_code'] = array(
+     '#type' => 'select',
+@@ -118,9 +122,6 @@ function r4032login_form_system_site_information_settings_validate($form, FormSt
+   if (!$form_state->isValueEmpty('r4032login_redirect_authenticated_users_to') && !$path_validator->isValid($form_state->getValue(('r4032login_redirect_authenticated_users_to')))) {
+     $form_state->setErrorByName('r4032login_redirect_authenticated_users_to', t("The redirect authenticated users path '%path' is either invalid or you do not have access to it.", array('%path' => $form_state->getValue('r4032login_redirect_authenticated_users_to'))));
+   }
+-  if (!$form_state->isValueEmpty('r4032login_user_login_path') && !$path_validator->isValid($form_state->getValue('r4032login_user_login_path'))) {
+-    $form_state->setErrorByName('r4032login_user_login_path', t("The user login form path '%path' is either invalid or you do not have access to it.", array('%path' => $form_state->getValue('r4032login_user_login_path'))));
+-  }
+ }
+ 
+ /**
+@@ -134,7 +135,7 @@ function r4032login_form_system_site_information_settings_form_submit($form, For
+     ->set('access_denied_message', $form_state->getValue('r4032login_access_denied_message'))
+     ->set('access_denied_message_type', $form_state->getValue('r4032login_access_denied_message_type'))
+     ->set('redirect_authenticated_users_to', $form_state->getValue('r4032login_redirect_authenticated_users_to'))
+-    ->set('user_login_path', $form_state->getValue('r4032login_user_login_path'))
++    ->set('user_login_route', $form_state->getValue('r4032login_user_login_route'))
+     ->set('default_redirect_code', $form_state->getValue('r4032login_default_redirect_code'))
+     ->set('match_noredirect_pages', $form_state->getValue('r4032login_match_noredirect_pages'))
+     ->save();
+diff --git a/r4032login.services.yml b/r4032login.services.yml
+index a66ddd2..2ba473c 100644
+--- a/r4032login.services.yml
++++ b/r4032login.services.yml
+@@ -1,6 +1,6 @@
+ services:
+   r4032login.subscriber:
+     class: Drupal\r4032login\EventSubscriber\R4032LoginSubscriber
+-    arguments: ['@config.factory', '@url_generator', '@current_user', '@redirect.destination']
++    arguments: ['@config.factory', '@current_user', '@redirect.destination']
+     tags:
+       - { name: event_subscriber }
+diff --git a/src/EventSubscriber/R4032LoginSubscriber.php b/src/EventSubscriber/R4032LoginSubscriber.php
+index 010dc9f..5f45510 100644
+--- a/src/EventSubscriber/R4032LoginSubscriber.php
++++ b/src/EventSubscriber/R4032LoginSubscriber.php
+@@ -8,9 +8,9 @@
+ namespace Drupal\r4032login\EventSubscriber;
+ 
+ use Drupal\Core\Config\ConfigFactoryInterface;
+-use Drupal\Core\Routing\UrlGeneratorInterface;
+ use Drupal\Core\Session\AccountInterface;
+ use Drupal\Core\Routing\RedirectDestinationInterface;
++use Drupal\Core\Url;
+ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+ use Symfony\Component\HttpKernel\KernelEvents;
+@@ -24,13 +24,6 @@ use Drupal\Component\Utility\Xss;
+ class R4032LoginSubscriber implements EventSubscriberInterface {
+ 
+   /**
+-   * The url generator service.
+-   *
+-   * @var \Drupal\Core\Routing\UrlGeneratorInterface
+-   */
+-  protected $urlGenerator;
+-
+-  /**
+    * The configuration factory.
+    *
+    * @var \Drupal\Core\Config\ConfigFactoryInterface
+@@ -56,15 +49,12 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
+    *
+    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+    *   The configuration factory.
+-   * @param \Drupal\Core\Routing\UrlGeneratorInterface $url_generator
+-   *   The url generator service.
+    * @param \Drupal\Core\Session\AccountInterface $current_user
+    *   The current user.
+    * @param \Drupal\Core\Routing\RedirectDestinationInterface $redirect_destination
+    *   The redirect destination service.
+    */
+-  public function __construct(ConfigFactoryInterface $config_factory, UrlGeneratorInterface $url_generator, AccountInterface $current_user, RedirectDestinationInterface $redirect_destination) {
+-    $this->urlGenerator = $url_generator;
++  public function __construct(ConfigFactoryInterface $config_factory, AccountInterface $current_user, RedirectDestinationInterface $redirect_destination) {
+     $this->configFactory = $config_factory;
+     $this->currentUser = $current_user;
+     $this->redirectDestination = $redirect_destination;
+@@ -75,9 +65,6 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
+    *
+    * @param \Symfony\Component\HttpKernel\Event\GetResponseEvent $event
+    *   The Event to process.
+-   *
+-   * @throws \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
+-   *   Thrown when the access is denied and redirects to user login page.
+    */
+   public function onKernelException(GetResponseEvent $event) {
+     $config = $this->configFactory->get('r4032login.settings');
+@@ -93,8 +80,9 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
+         drupal_set_message(Xss::filterAdmin($message), $message_type);
+       }
+       // Handle redirection to the login form.
+-      $login_path = $config->get('user_login_path');
+-      $response = new RedirectResponse($this->urlGenerator->generateFromPath($login_path, $options), $code);
++      $login_route = $config->get('user_login_route');
++      $url = Url::fromRoute($login_route, array(), $options)->toString();
++      $response = new RedirectResponse($url, $code);
+       $event->setResponse($response);
+     }
+     else {
+@@ -102,13 +90,10 @@ class R4032LoginSubscriber implements EventSubscriberInterface {
+       $redirect = $config->get('redirect_authenticated_users_to');
+       if ($redirect) {
+         // Custom access denied page for logged in users.
+-        $response = new RedirectResponse($this->urlGenerator->generateFromPath($redirect, $options), $code);
++        $url = Url::fromUserInput($redirect, $options)->toString();
++        $response = new RedirectResponse($url, $code);
+         $event->setResponse($response);
+       }
+-      else {
+-        // Display the default access denied page.
+-        throw new AccessDeniedHttpException();
+-      }
+     }
+   }
+ 
