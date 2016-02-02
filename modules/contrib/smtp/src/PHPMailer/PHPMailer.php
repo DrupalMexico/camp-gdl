@@ -2164,7 +2164,7 @@ class PHPMailer {
         $this->$name = $value;
       }
       else {
-        throw new phpmailerException(t('Cannot set or reset variable: !name', array('!name' => $name)) , self::STOP_CRITICAL);
+        throw new phpmailerException(t('Cannot set or reset variable: @name', array('@name' => $name)) , self::STOP_CRITICAL);
       }
     } catch (Exception $e) {
       $this->SetError($e->getMessage());

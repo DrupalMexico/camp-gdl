@@ -70,7 +70,7 @@ class SMTPConfigForm extends ConfigFormBase {
       '#size' => 6,
       '#maxlength' => 6,
       '#default_value' => $config->get('smtp_port'),
-      '#description' => t('The default SMTP port is 25, if that is being blocked try 80. Gmail uses 465. See !url for more information on configuring for use with Gmail.', array('!url' => 'http://gmail.google.com/support/bin/answer.py?answer=13287')),
+      '#description' => t('The default SMTP port is 25, if that is being blocked try 80. Gmail uses 465. See :url for more information on configuring for use with Gmail.', array(':url' => 'http://gmail.google.com/support/bin/answer.py?answer=13287')),
     );
     // Only display the option if openssl is installed.
     if (function_exists('openssl_open')) {
@@ -85,7 +85,7 @@ class SMTPConfigForm extends ConfigFormBase {
     else {
       $config->set('smtp_protocol', 'standard');
       $encryption_options = array('standard' => t('No'));
-      $encryption_description = t('Your PHP installation does not have SSL enabled. See the !url page on php.net for more information. Gmail requires SSL.', array('!url' => 'http://php.net/openssl'));
+      $encryption_description = t('Your PHP installation does not have SSL enabled. See the :url page on php.net for more information. Gmail requires SSL.', array(':url' => 'http://php.net/openssl'));
     }
     $form['server']['smtp_protocol'] = array(
       '#type' => 'select',
@@ -127,8 +127,8 @@ class SMTPConfigForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => t('E-mail from name'),
       '#default_value' => $config->get('smtp_fromname'),
-      '#description' => t('The name that all e-mails will be from. If left blank will use a default of: !name',
-          ['!name' => $this->configFactory->get('system.site')->get('name')]),
+      '#description' => t('The name that all e-mails will be from. If left blank will use a default of: @name',
+          ['@name' => $this->configFactory->get('system.site')->get('name')]),
     );
     $form['email_options']['smtp_allowhtml'] = array(
       '#type' => 'checkbox',
@@ -215,6 +215,19 @@ class SMTPConfigForm extends ConfigFormBase {
       ->set('smtp_allowhtml', $values['smtp_allowhtml'])
       ->set('smtp_debugging', $values['smtp_debugging'])
       ->save();
+
+    // Set as default mail system if module is enabled.
+    if ($config->get('smtp_on')) {
+      if ($mail_config['default'] != 'SMTPMailSystem') {
+        $config->set('prev_mail_system', $mail_system);
+      }
+      $mail_system['default'] = 'SMTPMailSystem';
+      $mail_config->set('interface', $mail_system)->save();
+    }
+    else {
+      $mail_system = $config->get('prev_mail_system');
+      $mail_config->set('interface', $mail_system)->save();
+    }
 
     // If an address was given, send a test e-mail message.
     if ($test_address = $values['smtp_test_address']) {
