@@ -198,7 +198,7 @@ class SMTPConfigForm extends ConfigFormBase {
     $values = $form_state->getValues();
     $config = $this->configFactory->getEditable('smtp.settings');
     $mail_config = $this->configFactory->getEditable('system.mail');
-    $mail_system = $mail_config->get('interface');
+    $mail_system = $mail_config->get('interface.default');
 
     // Updating config vars.
     if (isset($values['smtp_password'])) {
@@ -218,15 +218,15 @@ class SMTPConfigForm extends ConfigFormBase {
 
     // Set as default mail system if module is enabled.
     if ($config->get('smtp_on')) {
-      if ($mail_config['default'] != 'SMTPMailSystem') {
+      if ($mail_system != 'SMTPMailSystem') {
         $config->set('prev_mail_system', $mail_system);
       }
-      $mail_system['default'] = 'SMTPMailSystem';
-      $mail_config->set('interface', $mail_system)->save();
+      $mail_system = 'SMTPMailSystem';
+      $mail_config->set('interface.default', $mail_system)->save();
     }
     else {
       $mail_system = $config->get('prev_mail_system');
-      $mail_config->set('interface', $mail_system)->save();
+      $mail_config->set('interface.default', $mail_system)->save();
     }
 
     // If an address was given, send a test e-mail message.
