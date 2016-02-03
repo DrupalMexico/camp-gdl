@@ -1,0 +1,18 @@
+diff --git a/smtp.install b/smtp.install
+index 543ab86..f97331c 100644
+--- a/smtp.install
++++ b/smtp.install
+@@ -30,10 +30,11 @@ function smtp_install() {
+  * Implements hook_uninstall().
+  */
+ function smtp_uninstall() {
+-  $smtp_config = \Drupal::service('config.factory')->getEditable('smtp.settings');
++  $config = \Drupal::service('config.factory');
++  $smtp_config = $config->getEditable('smtp.settings');
+ 
+   // Restore previous mail system.
+-  \Drupal::config('system.mail')
++  $config->getEditable('system.mail')
+     ->set('interface', $smtp_config->get('prev_mail_system'))
+     ->save();
+ 
