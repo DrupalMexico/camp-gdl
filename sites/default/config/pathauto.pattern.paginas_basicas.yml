@@ -1,0 +1,35 @@
+uuid: 81eec3be-9da9-447e-b25f-9559d45d8f31
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - node
+id: paginas_basicas
+label: 'paginas basicas'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  fb78ef7a-39be-4f72-860d-135a08a3ba5b:
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fb78ef7a-39be-4f72-860d-135a08a3ba5b
+  fe915f40-98ab-4bcd-a800-b89c0a9b26f2:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: fe915f40-98ab-4bcd-a800-b89c0a9b26f2
+selection_logic: and
+weight: -10
+context_definitions:
+  -
+    id: 'node:langcode:language'
+    label: Language
