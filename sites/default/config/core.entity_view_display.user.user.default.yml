@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.user.user.field_about_me
     - field.field.user.user.field_company
+    - field.field.user.user.field_country
     - field.field.user.user.field_drupal_user
     - field.field.user.user.field_facebook_profile
     - field.field.user.user.field_full_name
@@ -15,6 +16,7 @@ dependencies:
   module:
     - image
     - link
+    - options
     - text
     - user
 id: user.user.default
@@ -35,6 +37,12 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_label
+  field_country:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_drupal_user:
     weight: 9
     label: above
