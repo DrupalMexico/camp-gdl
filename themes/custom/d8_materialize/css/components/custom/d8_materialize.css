@@ -2018,6 +2018,9 @@ footer.page-footer .footer-copyright {
     left: 10px;
     top: 5px; }
 
+#block-useraccountmenu {
+  margin-top: 25px; }
+
 .toolbar nav {
   height: inherit;
   line-height: inherit;

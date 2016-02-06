@@ -9,7 +9,7 @@ dependencies:
 id: d8_materialize_messages
 theme: d8_materialize
 region: content
-weight: -15
+weight: -16
 provider: null
 plugin: system_messages_block
 settings:

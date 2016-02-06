@@ -1,6 +1,6 @@
 uuid: fdad9a4c-f61a-4a24-bd50-800b02dbeae7
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -14,7 +14,7 @@ provider: null
 plugin: system_powered_by_block
 settings:
   id: system_powered_by_block
-  label: 'Powered by Drupal'
+  label: 'Hecho en Drupal '
   provider: system
   label_display: '0'
 visibility: {  }

@@ -29,12 +29,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_about_me:
-    weight: 6
+    type: text_textarea
+    weight: 0
     settings:
-      rows: 5
+      rows: 3
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
   field_company:
     weight: 3
     settings:
