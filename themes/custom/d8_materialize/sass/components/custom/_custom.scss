@@ -139,7 +139,7 @@ nav .button-collapse {
   transition: all 500ms;
 
   li {
-    margin: 0 .5em;
+    margin: 0 ;
     float: right;
   }
   a {
@@ -192,13 +192,16 @@ nav.menu--main {
 // social media
 .social-med a {
   //@include transition(all .5s);
-  color: #50B950;
-  &:hover {
-    color: #4DB6AC;
+  .fa-envelope {
+    position: relative;
+    bottom: 2px;
+    left: 4px;
   }
-}
-.fa-envelope-o {
-  font-size: 26px;
+  color: #f9d1ff;
+  font-size: 40px;
+  &:hover {
+    color: #d8d6dc;
+  }
 }
 
 // tool-bar menu
@@ -450,8 +453,8 @@ footer.page-footer {
     display: inline-block;
   }
 }
-i.fa-envelope {
-  margin-top: 10px;
+i.fa-stack {
+
 }
 footer.page-footer {
   .footer-copyright {
@@ -459,8 +462,14 @@ footer.page-footer {
   }
 }
 #block-poweredbypantheon {
+  padding: 0 12px;
+  margin-top: 12px;
  p {
-   margin-bottom: 0;
+    margin: 0;
+ }
+ p strong {
+   color: #adbec6;
+   font-size: 18px;
  }
 }
 
@@ -468,6 +477,6 @@ footer.page-footer {
   height: 300px;
 }
 
-.d8-local-tasks {
+#block-d8-materialize-local-tasks {
  margin-top: 20px;
 }

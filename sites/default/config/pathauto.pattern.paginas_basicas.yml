@@ -29,7 +29,4 @@ selection_criteria:
     uuid: fe915f40-98ab-4bcd-a800-b89c0a9b26f2
 selection_logic: and
 weight: -10
-context_definitions:
-  -
-    id: 'node:langcode:language'
-    label: Language
+context_definitions: {  }
