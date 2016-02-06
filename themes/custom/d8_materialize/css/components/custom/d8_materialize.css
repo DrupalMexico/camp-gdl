@@ -1753,7 +1753,7 @@ nav .button-collapse {
   -o-transition: all 500ms;
   transition: all 500ms; }
   .top-nav li {
-    margin: 0 .5em;
+    margin: 0;
     float: right; }
   .top-nav a {
     text-transform: uppercase; }
@@ -1788,12 +1788,14 @@ nav.menu--main {
   background-color: transparent; }
 
 .social-med a {
-  color: #50B950; }
+  color: #f9d1ff;
+  font-size: 40px; }
+  .social-med a .fa-envelope {
+    position: relative;
+    bottom: 2px;
+    left: 4px; }
   .social-med a:hover {
-    color: #4DB6AC; }
-
-.fa-envelope-o {
-  font-size: 26px; }
+    color: #d8d6dc; }
 
 .toolbar-lining nav ul li {
   float: initial; }
@@ -1977,19 +1979,22 @@ footer.page-footer {
   #block-suscribedrupalcamp .clear {
     display: inline-block; }
 
-i.fa-envelope {
-  margin-top: 10px; }
-
 footer.page-footer .footer-copyright {
   height: auto; }
 
-#block-poweredbypantheon p {
-  margin-bottom: 0; }
+#block-poweredbypantheon {
+  padding: 0 12px;
+  margin-top: 12px; }
+  #block-poweredbypantheon p {
+    margin: 0; }
+  #block-poweredbypantheon p strong {
+    color: #adbec6;
+    font-size: 18px; }
 
 #map {
   height: 300px; }
 
-.d8-local-tasks {
+#block-d8-materialize-local-tasks {
   margin-top: 20px; }
 
 .toolbar nav {

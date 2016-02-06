@@ -14,10 +14,15 @@
  */
 #}
 {% if primary %}
-  <div class="d8-local-tasks"></div>
-  <div class="row">
-    <div class="col s12">
-      {{ primary }}
+  {% if is_front %}
+  <div class="container">
+  {% endif %}
+    <div class="row">
+      <div class="col s12">
+        {{ primary }}
+      </div>
     </div>
-  </div>
+  {% if is_front %}
+    </div>
+  {% endif %}
 {% endif %}
