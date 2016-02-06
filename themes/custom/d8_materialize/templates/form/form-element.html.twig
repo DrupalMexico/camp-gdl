@@ -67,6 +67,11 @@ set description_classes = [
 description_display == 'invisible' ? 'visually-hidden',
 ]
 %}
+{% if type == 'textarea' or type == 'managed_file' %}
+    {% set label_display = 'before' %}
+{% endif %}
+
+
 <div{{ attributes.addClass(classes) }}>
     {% if label_display in ['before', 'invisible'] %}
         {{ label }}

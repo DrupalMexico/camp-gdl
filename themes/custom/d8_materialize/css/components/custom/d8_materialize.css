@@ -1997,6 +1997,27 @@ footer.page-footer .footer-copyright {
 #block-d8-materialize-local-tasks {
   margin-top: 20px; }
 
+.confirm-parent, .password-parent {
+  overflow: visible; }
+
+.input-field.form-type-textarea label {
+  top: 0;
+  position: relative; }
+
+.form-type-managed-file .description {
+  margin-top: 10px; }
+
+.form-type-managed-file {
+  display: block; }
+  .form-type-managed-file label {
+    position: relative;
+    top: 0;
+    margin-bottom: 10px; }
+  .form-type-managed-file .btn {
+    position: relative;
+    left: 10px;
+    top: 5px; }
+
 .toolbar nav {
   height: inherit;
   line-height: inherit;
