@@ -36,7 +36,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: file_default
+    type: file_table
   field_status:
     weight: 105
     label: above
@@ -52,5 +52,7 @@ content:
     type: entity_reference_label
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

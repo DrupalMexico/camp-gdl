@@ -12,7 +12,7 @@ dependencies:
 id: ubicacion
 theme: d8_materialize
 region: content
-weight: -9
+weight: -10
 provider: null
 plugin: 'block_content:298d9867-b2d9-4a6d-b200-e64571591f0a'
 settings:
