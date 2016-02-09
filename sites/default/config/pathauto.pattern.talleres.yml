@@ -1,0 +1,23 @@
+uuid: f2aa38e9-38aa-46ff-8200-acb4b786fb42
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: talleres
+label: talleres
+type: 'canonical_entities:node'
+pattern: '/talleres/[node:title]'
+selection_criteria:
+  aa957d91-e2a9-4210-9100-d13b3f5f7b63:
+    id: 'entity_bundle:node'
+    bundles:
+      training: training
+    negate: false
+    context_mapping:
+      node: node
+    uuid: aa957d91-e2a9-4210-9100-d13b3f5f7b63
+selection_logic: and
+weight: -5
+context_definitions: {  }

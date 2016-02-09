@@ -2,6 +2,8 @@ uuid: b4aeb181-8014-4436-9704-4aa21d298c07
 langcode: en
 status: true
 dependencies:
+  module:
+    - user
   theme:
     - d8_materialize
 id: d8_materialize_local_tasks
@@ -17,4 +19,11 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
