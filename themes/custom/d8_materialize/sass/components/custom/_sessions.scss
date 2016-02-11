@@ -1,0 +1,38 @@
+.page-node-type-session {
+  .row.article-container {
+    margin-bottom: 100px;
+  }
+  @media #{$small-and-down} {
+    .node__submitted {
+      margin: 0;
+    }
+    .row {
+      .col {
+        width: 100%;
+        margin: 1em auto;
+      }
+      .row .col.push-s2,
+      .row .col.pull-s1,
+      .row .col.push-s1, {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 44px;
+    @media #{$small-and-down} {
+      margin-top: 0;
+    }
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  .field--name-user-picture {
+    margin-top: 31.5px;
+    @media #{$medium-and-down} {
+      margin: 0;
+    }
+  }
+}
