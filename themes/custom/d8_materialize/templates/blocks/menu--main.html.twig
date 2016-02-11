@@ -26,11 +26,29 @@
 {% endmacro %}
 
 {% import _self as menu %}
-<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 
+{% macro render_sub_menu(name, Items) %}
+    <ul id="{{ name }}" class="dropdown-content">
+        {% for item in Items %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% for item in items %}
+    {% if item.below %}
+        {{ menu.render_sub_menu(item.title|lower, item.below) }}
+    {% endif %}
+{% endfor %}
+
+<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 <ul class="right hide-on-med-and-down">
     {% for item in items %}
-        {{  menu.rendli(item) }}
+        {% if item.below %}
+            <li><a class="dropdown-button" data-activates="{{ item.title|lower }}">{{ item.title }}<i class="material-icons right"></i></a></li>
+        {% else %}
+            {{  menu.rendli(item) }}
+        {% endif %}
     {% endfor %}
 </ul>
 <ul class="side-nav" id="mobile-demo">
