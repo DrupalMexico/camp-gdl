@@ -2083,3 +2083,12 @@ footer.page-footer .footer-copyright {
     @media only screen and (max-width: 600px) {
       .date-camp img {
         max-width: 70px; } }
+
+.dropdown-content li {
+  min-height: auto; }
+  .dropdown-content li a {
+    font-size: 14px;
+    padding: 10px; }
+
+.side-nav .dropdown-content li a {
+  height: auto; }

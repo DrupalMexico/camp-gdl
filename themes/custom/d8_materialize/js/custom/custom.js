@@ -91,6 +91,7 @@
             });
 
             // Materialize triggers.
+
             ///////////////////////
             // Select form items.
             $('select', context).material_select();
@@ -120,6 +121,9 @@
                 $(this).text(t);
             });
         }
+        $(".dropdown-button").once('d8_materialize').dropdown({
+            belowOrigin: true
+        });
 
     }); // document.ready
 })(jQuery);

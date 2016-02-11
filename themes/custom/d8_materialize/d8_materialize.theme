@@ -6,11 +6,17 @@
  */
 
 function d8_materialize_preprocess(&$variables, $hook) {
+
     if($hook == 'menu_local_task') {
         $url = $variables['link']['#url']->getInternalPath();
         $variables['url'] = $url;
     }
-    if($hook == 'menu__main' || $hook == 'menu_local_tasks') {
+    $array_of_hooks = array(
+        'menu__main',
+        'menu_local_tasks',
+        'block'
+    );
+    if(in_array($hook, $array_of_hooks)) {
         $is_front = Drupal::service('path.matcher')->isFrontPage();
         $variables['is_front'] = $is_front;
     }
