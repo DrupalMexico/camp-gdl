@@ -1,5 +1,5 @@
 display_denied_message: true
-access_denied_message: 'Acceso denegado. Debes iniciar sessión para ver esta página.'
+access_denied_message: 'Inicia sesión o crea una cuenta para ver esta página.'
 access_denied_message_type: warning
 redirect_authenticated_users_to: ''
 user_login_route: user.register

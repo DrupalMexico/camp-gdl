@@ -1,0 +1,23 @@
+uuid: 63c8aef3-11bb-40ec-b700-c6d85fc24b3c
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: charlas
+label: charlas
+type: 'canonical_entities:node'
+pattern: '/charlas/[node:title]'
+selection_criteria:
+  8c0d827b-374f-4487-8207-7e2b090c7069:
+    id: 'entity_bundle:node'
+    bundles:
+      session: session
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8c0d827b-374f-4487-8207-7e2b090c7069
+selection_logic: and
+weight: -5
+context_definitions: {  }

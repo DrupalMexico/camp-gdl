@@ -1,0 +1,23 @@
+uuid: b1d663b2-53e0-458b-b55c-92430e159fda
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: patrocinadores
+label: patrocinadores
+type: 'canonical_entities:node'
+pattern: '/patrocinador/[node:title]'
+selection_criteria:
+  972a4e79-809b-4bf3-b859-891d544e9751:
+    id: 'entity_bundle:node'
+    bundles:
+      sponsor: sponsor
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 972a4e79-809b-4bf3-b859-891d544e9751
+selection_logic: and
+weight: -5
+context_definitions: {  }
