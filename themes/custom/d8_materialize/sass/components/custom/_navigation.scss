@@ -1,0 +1,19 @@
+.dropdown-content {
+  li {
+    min-height: auto;
+    a {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+}
+// Mobile navigation.
+.side-nav {
+  .dropdown-content {
+    li {
+      a {
+        height: auto;
+      }
+    }
+  }
+}

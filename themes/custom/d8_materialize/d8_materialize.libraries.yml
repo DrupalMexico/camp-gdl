@@ -6,6 +6,7 @@ materialize:
       css/materialize.css: { scope: Footer }
   js:
     js/bin/materialize.js: {}
+    js/dropdown.js: {}
   dependencies:
       - core/jquery
       - core/jquery.once
