@@ -27,17 +27,13 @@
 
 {% import _self as menu %}
 
-{% macro render_sub_menu(name, Items) %}
-    <ul id="{{ name }}" class="dropdown-content">
-        {% for item in Items %}
-            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-    </ul>
-{% endmacro %}
-
 {% for item in items %}
     {% if item.below %}
-        {{ menu.render_sub_menu(item.title|lower, item.below) }}
+        <ul id="{{ item.title|lower }}" class="dropdown-content">
+            {% for i in item.below %}
+                <li><a href="{{ i.url }}">{{ i.title }}</a></li>
+            {% endfor %}
+        </ul>
     {% endif %}
 {% endfor %}
 
