@@ -2127,6 +2127,9 @@ footer.page-footer .footer-copyright {
 .profile .row.user-profile {
   margin: 80px 0 200px; }
 
+.profile .field--name-user-picture {
+  margin-top: 10px; }
+
 @media only screen and (max-width: 992px) {
   .profile .col.s2.push-l1,
   .profile .col.s9.push-l1 {
