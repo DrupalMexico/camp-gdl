@@ -2123,3 +2123,17 @@ footer.page-footer .footer-copyright {
   @media only screen and (max-width: 992px) {
     .page-node-type-session .field--name-user-picture {
       margin: 0; } }
+
+.profile .row.user-profile {
+  margin: 80px 0 200px; }
+
+@media only screen and (max-width: 992px) {
+  .profile .col.s2.push-l1,
+  .profile .col.s9.push-l1 {
+    width: 100%; } }
+
+.profile .col.s9.push-l1 .form-type-item {
+  margin-top: 0; }
+
+.profile .col.s9.push-l1 h4 {
+  margin-top: 0; }
