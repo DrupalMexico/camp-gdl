@@ -1,0 +1,25 @@
+.profile {
+  .row.user-profile {
+    margin: 80px 0 200px;
+  }
+  .field--name-user-picture {
+    margin-top: 10px;
+  }
+  .col.s2.push-l1,
+  .col.s9.push-l1 {
+    @media #{$medium-and-down} {
+      width: 100%;
+    }
+  }
+  .col.s2.push-l1 {
+
+  }
+  .col.s9.push-l1 {
+    .form-type-item {
+      margin-top: 0;
+    }
+    h4 {
+      margin-top: 0;
+    }
+  }
+}

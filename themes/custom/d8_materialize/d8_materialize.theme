@@ -5,6 +5,9 @@
  * Functions to support theming in the d8mdl theme.
  */
 
+/**
+ * Implements hook_preprocess().
+ */
 function d8_materialize_preprocess(&$variables, $hook) {
 
     if($hook == 'menu_local_task') {
@@ -20,4 +23,12 @@ function d8_materialize_preprocess(&$variables, $hook) {
         $is_front = Drupal::service('path.matcher')->isFrontPage();
         $variables['is_front'] = $is_front;
     }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function d8_materialize_preprocess_user(&$variables, $hook) {
+    $variables ['up']= $variables['content']['user_picture'];
+    unset($variables['content']['user_picture']);
 }
