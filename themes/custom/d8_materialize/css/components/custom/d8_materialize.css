@@ -1645,6 +1645,18 @@ html {
 h1, h2, h3, h4 {
   font-weight: bold; }
 
+h1 {
+  font-size: 40px; }
+
+h2 {
+  font-size: 35px; }
+
+h3 {
+  font-size: 30px; }
+
+h4 {
+  font-size: 28px; }
+
 #search-block-form .input-field {
   margin-top: 1em; }
 
@@ -1903,7 +1915,7 @@ footer.page-footer {
       height: 80%; } }
 
 .views-element-container h2 {
-  font-size: 3em; }
+  font-size: 35px; }
 
 .view-id-frontpage {
   margin: 40px 0; }
@@ -2125,7 +2137,12 @@ footer.page-footer .footer-copyright {
       margin: 0; } }
 
 .profile .row.user-profile {
-  margin: 80px 0 200px; }
+  margin-top: 80px;
+  margin-bottom: 80px; }
+  .profile .row.user-profile.user-profile-compact {
+    margin-bottom: 10px; }
+  .profile .row.user-profile h1 {
+    margin-top: 0; }
 
 .profile .field--name-user-picture {
   margin-top: 10px; }

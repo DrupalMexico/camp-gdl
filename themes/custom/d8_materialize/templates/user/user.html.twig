@@ -12,16 +12,21 @@
  *   such as 'user_picture' are available as 'content.user_picture'.
  * - attributes: HTML attributes for the container element.
  * - user: A Drupal User entity.
+ * - up: User Picture.
  *
  * @see template_preprocess_user()
  */
 #}
+{% set user_name = user.get('name').getValue()[0].value %}
 <article{{ attributes.addClass('profile') }}>
-  <div class="row user-profile">
+  <div class="row user-profile user-profile-{{ view_mode }}">
     <div class="col s2 push-l1">
       {{ up }}
     </div>
     <div class="col s9 push-l1">
+      {% if view_mode == 'full' %}
+        <h1>{{ user_name }}</h1>
+      {% endif %}
       {{ content }}
     </div>
   </div>
