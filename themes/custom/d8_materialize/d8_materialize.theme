@@ -29,6 +29,7 @@ function d8_materialize_preprocess(&$variables, $hook) {
  * Implements hook_preprocess_field().
  */
 function d8_materialize_preprocess_user(&$variables, $hook) {
+    $variables ['view_mode'] = $variables['elements']['#view_mode'];
     $variables ['up']= $variables['content']['user_picture'];
     unset($variables['content']['user_picture']);
 }

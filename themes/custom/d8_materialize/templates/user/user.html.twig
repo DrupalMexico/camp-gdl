@@ -19,12 +19,12 @@
 #}
 {% set user_name = user.get('name').getValue()[0].value %}
 <article{{ attributes.addClass('profile') }}>
-  <div class="row user-profile">
+  <div class="row user-profile user-profile-{{ view_mode }}">
     <div class="col s2 push-l1">
       {{ up }}
     </div>
     <div class="col s9 push-l1">
-      {% if user_name %}
+      {% if view_mode == 'full' %}
         <h1>{{ user_name }}</h1>
       {% endif %}
       {{ content }}

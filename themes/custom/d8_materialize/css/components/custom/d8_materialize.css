@@ -2139,6 +2139,8 @@ footer.page-footer .footer-copyright {
 .profile .row.user-profile {
   margin-top: 80px;
   margin-bottom: 80px; }
+  .profile .row.user-profile.user-profile-compact {
+    margin-bottom: 10px; }
   .profile .row.user-profile h1 {
     margin-top: 0; }
 
