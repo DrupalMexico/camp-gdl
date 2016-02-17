@@ -1657,6 +1657,15 @@ h3 {
 h4 {
   font-size: 28px; }
 
+.region-content ul {
+  margin-left: 20px; }
+  .region-content ul li {
+    line-height: 2em;
+    list-style: disc; }
+    .region-content ul li ul li {
+      margin-left: 20px;
+      list-style: circle; }
+
 #search-block-form .input-field {
   margin-top: 1em; }
 
