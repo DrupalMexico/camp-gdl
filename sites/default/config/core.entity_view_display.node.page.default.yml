@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_files
     - node.type.page
   module:
+    - file
     - text
     - user
 id: node.page.default
@@ -19,7 +21,15 @@ content:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+  field_files:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
   links:
     weight: 101
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

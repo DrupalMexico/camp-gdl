@@ -9,7 +9,7 @@ dependencies:
 id: d8_materialize_page_title
 theme: d8_materialize
 region: content
-weight: -14
+weight: -16
 provider: null
 plugin: page_title_block
 settings:
@@ -20,6 +20,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/charlas/*\r\n/user/*"
+    pages: "<front>\r\n/charlas/*"
     negate: true
     context_mapping: {  }

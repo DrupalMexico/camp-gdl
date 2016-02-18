@@ -1,0 +1,27 @@
+uuid: ded384d7-3d7c-4d06-8e44-68326cb3646e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.page
+  module:
+    - file
+id: node.page.field_files
+field_name: field_files
+entity_type: node
+bundle: page
+label: Downloads
+description: 'Adjuntar archivos descargables al tipo de contenido Basic Page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf md'
+  max_filesize: '8 MB'
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

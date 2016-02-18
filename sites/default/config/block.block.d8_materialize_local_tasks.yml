@@ -9,7 +9,7 @@ dependencies:
 id: d8_materialize_local_tasks
 theme: d8_materialize
 region: content
-weight: -15
+weight: -14
 provider: null
 plugin: local_tasks_block
 settings:

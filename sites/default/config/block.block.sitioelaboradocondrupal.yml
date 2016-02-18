@@ -1,0 +1,28 @@
+uuid: 839920bd-185f-4cc5-ab00-b9bd7e812110
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+  theme:
+    - d8_materialize
+id: sitioelaboradocondrupal
+theme: d8_materialize
+region: sidebar
+weight: -19
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Sitio elaborado con Drupal'
+  provider: system
+  label_display: visible
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
