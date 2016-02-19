@@ -12,15 +12,15 @@ definitions:
     expanded: false
     enabled: false
   user__page:
-    enabled: true
+    weight: -50
     menu_name: account
     parent: ''
-    weight: -47
     expanded: false
+    enabled: true
   user__logout:
-    enabled: true
+    weight: -47
     menu_name: account
     parent: ''
-    weight: -48
     expanded: false
+    enabled: true
 langcode: es
