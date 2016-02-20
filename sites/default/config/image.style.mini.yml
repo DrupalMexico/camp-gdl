@@ -1,0 +1,14 @@
+uuid: 12483fa5-f4eb-4b89-a659-89060efc9b67
+langcode: es
+status: true
+dependencies: {  }
+name: mini
+label: 'mini (50x50)'
+effects:
+  bd63f045-76d8-426c-b000-ec0bc25056b2:
+    uuid: bd63f045-76d8-426c-b000-ec0bc25056b2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 50
+      height: 50
