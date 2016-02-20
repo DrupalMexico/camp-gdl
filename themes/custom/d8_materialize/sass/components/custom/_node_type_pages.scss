@@ -1,3 +1,14 @@
-.page-node-type-page {
-
+.node--type-page {
+  .node__content {
+    img {
+      @media #{$medium-and-up} {
+        max-width: 100%;
+        height: auto;
+      }
+      @media #{$medium-and-down} {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
