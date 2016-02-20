@@ -2166,3 +2166,13 @@ footer.page-footer .footer-copyright {
 
 .profile .col.s9.push-l1 h4 {
   margin-top: 0; }
+
+@media only screen and (min-width: 601px) {
+  .node--type-page .node__content img {
+    max-width: 100%;
+    height: auto; } }
+
+@media only screen and (max-width: 992px) {
+  .node--type-page .node__content img {
+    width: 100%;
+    height: auto; } }
