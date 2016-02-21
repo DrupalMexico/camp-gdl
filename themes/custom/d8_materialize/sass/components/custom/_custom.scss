@@ -98,16 +98,6 @@ nav .button-collapse {
 .tabs-container {
   margin-top: 15px;
 }
-.tabs {
-  height: inherit;
-  li.tab.active {
-    a {
-      background: $custom-color;
-      color: #fff;
-    }  
-  }
-  border-bottom: 2px solid $custom-color;
-}
 .indicator {
   display: none;
 }
@@ -200,7 +190,11 @@ nav .button-collapse {
       transition: all 100ms;
     }
     #block-d8-materialize-branding {
-      height: 58px;
+      //height: 58px;
+      a img {
+        max-width: 100%;
+        height: 58px;
+      }
     }
 
   }
@@ -278,7 +272,7 @@ footer.page-footer {
 // Forms
 .description {
   margin-bottom: 30px;
-  color: $custom-color;
+  color: #A7A7A7;
 }
 
 .input-field {

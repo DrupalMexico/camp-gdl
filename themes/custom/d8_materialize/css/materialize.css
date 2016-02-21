@@ -6391,24 +6391,24 @@ button:focus {
 
 label {
   font-size: 0.8rem;
-  color: #9e9e9e; }
+  color: #00796b; }
 
 /***************************
    Text Inputs + Textarea
 ****************************/
 ::-webkit-input-placeholder {
-  color: #d1d1d1; }
+  color: #00dfc5; }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #d1d1d1; }
+  color: #00dfc5; }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #d1d1d1; }
+  color: #00dfc5; }
 
 :-ms-input-placeholder {
-  color: #d1d1d1; }
+  color: #00dfc5; }
 
 input:not([type]),
 input[type=text],
@@ -6424,7 +6424,7 @@ input[type=search],
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #00796b;
   border-radius: 0;
   outline: none;
   height: 3rem;
@@ -6638,7 +6638,7 @@ textarea.materialize-textarea {
   position: relative;
   margin-top: 1rem; }
   .input-field label {
-    color: #9e9e9e;
+    color: #00796b;
     position: absolute;
     top: 0.8rem;
     left: 0.75rem;
@@ -7049,7 +7049,7 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #9e9e9e;
+    border-bottom: 1px solid #00796b;
     outline: none;
     height: 3rem;
     line-height: 3rem;

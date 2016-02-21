@@ -33,8 +33,8 @@
             // Sticky Navigation.
             ////////////////////
             $(window).scroll(function () {
-                var topnav = $('.site-logo img').position();
-                var topdistance = topnav.top
+                var topnav = $('.branding-block img').position();
+                var topdistance = topnav.top;
                 var scroll = $(window).scrollTop();
                 stickyNav(topdistance, scroll);
             });
