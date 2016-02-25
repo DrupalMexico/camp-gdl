@@ -153,7 +153,8 @@ nav .button-collapse {
 
   li {
     margin: 0 ;
-    float: right;
+    float: left;
+    padding: 0;
   }
   a {
     text-transform: uppercase;
@@ -531,9 +532,16 @@ footer.page-footer {
 #block-useraccountmenu {
   margin-top: 25px;
 }
-.view-user-picture-table-column {
+.views-field-user-picture {
   img {
     border-radius: 50%;
     border: 1px solid #000000;
   }
+}
+.row.user-profile.user-profile-full {
+  img {
+    border-radius: 50%;
+    border: 1px solid #000000;
+  }
+
 }
