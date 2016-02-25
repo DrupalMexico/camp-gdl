@@ -2036,6 +2036,10 @@ footer.page-footer .footer-copyright {
 #block-useraccountmenu {
   margin-top: 25px; }
 
+.view-user-picture-table-column img {
+  border-radius: 50%;
+  border: 1px solid #000000; }
+
 .toolbar nav {
   height: inherit;
   line-height: inherit;
@@ -2104,6 +2108,9 @@ footer.page-footer .footer-copyright {
   .dropdown-content li a {
     font-size: 14px;
     padding: 10px; }
+
+nav ul a {
+  padding: 0 10px; }
 
 .side-nav .dropdown-content li a {
   height: auto; }

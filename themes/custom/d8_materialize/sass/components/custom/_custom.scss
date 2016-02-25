@@ -531,3 +531,9 @@ footer.page-footer {
 #block-useraccountmenu {
   margin-top: 25px;
 }
+.view-user-picture-table-column {
+  img {
+    border-radius: 50%;
+    border: 1px solid #000000;
+  }
+}
