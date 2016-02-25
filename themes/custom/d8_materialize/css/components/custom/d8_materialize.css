@@ -2112,6 +2112,9 @@ footer.page-footer .footer-copyright {
 nav ul a {
   padding: 0 10px; }
 
+i.right {
+  margin-left: 5px; }
+
 .side-nav .dropdown-content li a {
   height: auto; }
 
