@@ -1768,7 +1768,8 @@ nav .button-collapse {
   transition: all 500ms; }
   .top-nav li {
     margin: 0;
-    float: right; }
+    float: left;
+    padding: 0; }
   .top-nav a {
     text-transform: uppercase; }
   .top-nav.sticky {
@@ -2036,7 +2037,11 @@ footer.page-footer .footer-copyright {
 #block-useraccountmenu {
   margin-top: 25px; }
 
-.view-user-picture-table-column img {
+.views-field-user-picture img {
+  border-radius: 50%;
+  border: 1px solid #000000; }
+
+.row.user-profile.user-profile-full img {
   border-radius: 50%;
   border: 1px solid #000000; }
 
