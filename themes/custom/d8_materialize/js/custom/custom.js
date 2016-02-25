@@ -122,7 +122,8 @@
             });
         }
         $(".dropdown-button").once('d8_materialize').dropdown({
-            belowOrigin: true
+            belowOrigin: true,
+            constrainwidth: false
         });
 
     }); // document.ready
