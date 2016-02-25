@@ -123,7 +123,7 @@
         }
         $(".dropdown-button").once('d8_materialize').dropdown({
             belowOrigin: true,
-            constrainwidth: false
+            constrain_width: false
         });
 
     }); // document.ready
