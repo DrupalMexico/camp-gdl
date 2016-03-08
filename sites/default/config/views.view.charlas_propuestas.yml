@@ -719,11 +719,13 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<p>En Drupal Camp cualquier persona puede proponer una charla. Se puede hablar de Drupal, CSS, HTML, Javascript, diseño responsivo, UX, Diseño, Social Media, tecnologías web, etc. Las charlas propuestas serán evaluadas y notificaremos a las personas cuyas charlas hayan sido seleccionadas. <strong><a href=\"node/add/session\">¡Propón una charla!</a></strong></p>\n<hr>"
+            value: "<p>En el DrupalCamp Guadalajara 2016 cualquier persona puede proponer una conferencia. Uno puede hablar de Drupal, CSS, HTML, Javascript, diseño responsivo, UX, Diseño, Social Media, tecnologías web, etc. Las conferencias propuestas serán evaluadas y notificaremos a las personas cuyas conferencias hayan sido seleccionadas. <br /><strong><a href=\"node/add/session\">¡Propón una conferencia!</a></strong></p>\n<hr>"
             format: full_html
           plugin_id: text
       defaults:
         header: false
+        title: false
+      title: 'Conferencias Propuestas'
     cache_metadata:
       max-age: 0
       contexts:

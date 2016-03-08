@@ -13,6 +13,7 @@ dependencies:
     - field.field.user.user.field_linkedin_profile
     - field.field.user.user.field_twitter_profile
     - field.field.user.user.user_picture
+    - image.style.thumbnail
   module:
     - image
     - link
