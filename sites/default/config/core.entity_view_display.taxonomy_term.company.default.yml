@@ -7,6 +7,7 @@ dependencies:
     - field.field.taxonomy_term.company.field_sponsor
     - field.field.taxonomy_term.company.field_sponsor_level
     - field.field.taxonomy_term.company.field_website
+    - image.style.medium
     - taxonomy.vocabulary.company
   module:
     - image

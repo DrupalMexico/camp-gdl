@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.sponsor.body
     - field.field.node.sponsor.field_logo
     - field.field.node.sponsor.field_sponsor_level
+    - image.style.medium
     - node.type.sponsor
   module:
     - image
