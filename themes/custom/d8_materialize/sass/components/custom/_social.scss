@@ -1,0 +1,21 @@
+.social {
+  border-bottom: 1px solid #c3c3c3;
+  span {
+    color: #c3c3c3;
+    margin-right: 5px;
+    &.fa {
+      -webkit-transition: all 300ms;
+      -moz-transition: all 300ms;
+      -ms-transition: all 300ms;
+      -o-transition: all 300ms;
+      transition: all 300ms;
+      &:hover {
+        color: #9c9c9c;
+      }
+    }
+  }
+  .share-title {
+    font-size: 20px;
+    font-family: "Open Sans";
+  }
+}
