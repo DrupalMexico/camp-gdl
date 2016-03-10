@@ -1,0 +1,27 @@
+uuid: fed560eb-684b-4b81-a058-88fb77950255
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experiencia
+    - node.type.training
+    - taxonomy.vocabulary.nivel_de_experiencia
+id: node.training.field_experiencia
+field_name: field_experiencia
+entity_type: node
+bundle: training
+label: 'Nivel de experiencia'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      nivel_de_experiencia: nivel_de_experiencia
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

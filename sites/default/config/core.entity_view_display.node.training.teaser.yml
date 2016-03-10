@@ -1,29 +1,23 @@
 uuid: 750e1a56-6309-4e7f-b400-a04c9ee85b88
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.training.body
     - field.field.node.training.field_end_date
+    - field.field.node.training.field_experiencia
+    - field.field.node.training.field_ponentes
     - field.field.node.training.field_start_date
     - node.type.training
   module:
     - datetime
-    - text
     - user
 id: node.training.teaser
 targetEntityType: node
 bundle: training
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 1
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
   field_start_date:
     type: datetime_default
     weight: 0
@@ -37,5 +31,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_end_date: true
+  field_experiencia: true
+  field_ponentes: true
   langcode: true

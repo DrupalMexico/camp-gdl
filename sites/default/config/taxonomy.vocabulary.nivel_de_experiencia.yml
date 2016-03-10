@@ -1,0 +1,9 @@
+uuid: 4da5e9e5-869a-4495-8938-568756c7102b
+langcode: es
+status: true
+dependencies: {  }
+name: 'Nivel de Experiencia'
+vid: nivel_de_experiencia
+description: ''
+hierarchy: 0
+weight: 0

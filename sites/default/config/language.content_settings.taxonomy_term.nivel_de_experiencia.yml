@@ -1,0 +1,11 @@
+uuid: d4945f28-b3cc-428c-ae5d-9309753e7b22
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.nivel_de_experiencia
+id: taxonomy_term.nivel_de_experiencia
+target_entity_type_id: taxonomy_term
+target_bundle: nivel_de_experiencia
+default_langcode: site_default
+language_alterable: false
