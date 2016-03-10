@@ -33,7 +33,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'create session content'
+          perm: 'access content'
       cache:
         type: none
         options: {  }
@@ -726,6 +726,7 @@ display:
         relationships: false
         filters: false
         filter_groups: false
+        access: false
       title: 'Mis Conferencias Propuestas'
       display_description: ''
       fields:
@@ -1046,6 +1047,10 @@ display:
         operator: AND
         groups:
           1: AND
+      access:
+        type: perm
+        options:
+          perm: 'create session content'
     cache_metadata:
       max-age: 0
       contexts:
