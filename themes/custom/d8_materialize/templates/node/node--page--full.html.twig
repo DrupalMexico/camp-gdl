@@ -101,12 +101,14 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
           {{ content.field_files }}
         </div>
         <div class="col s8">
+          {% include active_theme_path() ~ "/templates/social/social_share.html.twig" %}
           {{ content.body }}
         </div>
       </div>
     {% elseif content.field_files['#is_multiple'] is null %}
       <div class="row">
         <div class="col s11 offset-r1">
+          {% include active_theme_path() ~ "/templates/social/social_share.html.twig" %}
           {{ content.body }}
         </div>
       </div>

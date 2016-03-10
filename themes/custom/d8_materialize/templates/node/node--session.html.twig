@@ -93,6 +93,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
       {% if title %}
         <h1>{{ title[0].value }}</h1>
       {% endif %}
+      {% include active_theme_path() ~ "/templates/social/social_share.html.twig" %}
       <div{{ content_attributes.addClass('node__content') }}>
         {{ content }}
       </div>

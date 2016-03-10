@@ -1,0 +1,24 @@
+{% set node_title = node.getTitle() | url_encode %}
+{% set social_url = base_root ~ url %}
+{% set summary = content.body[0]['#text']|striptags %}
+{% set summary_url = summary|length > 140 ? summary|url_encode|slice(0, 140) ~ '...' : summary  %}
+<div class="social">
+  <div class="service-links">
+    <span class="share-title">{{ "Compartir:"|t }}</span>
+    <a href="http://www.facebook.com/sharer.php?u={{ social_url }}&amp;t={{ node_title }}"
+       title="Share on Facebook"
+       class="service-links-facebook"
+       rel="nofollow"
+       target="_blank"><span class="fa fa-2x fa-facebook-square"></span></a>
+    <a href="http://twitter.com/share?url={{ social_url }}&amp;text={{ node_title }}"
+       title="Share this on Twitter"
+       class="service-links-twitter"
+       rel="nofollow"
+       target="_blank"><span class="fa fa-2x fa-twitter-square"></span></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ social_url }}&amp;title={{ node_title }}&amp;summary={{ summary_url }}&amp;source={{ site_name|url_encode }}"
+       title="Publish this post to LinkedIn"
+       class="service-links-linkedin"
+       rel="nofollow"
+       target="_blank"><span class="fa fa-2x fa-linkedin-square"></span></a>
+  </div>
+</div>

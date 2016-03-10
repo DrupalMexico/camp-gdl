@@ -33,3 +33,21 @@ function d8_materialize_preprocess_user(&$variables, $hook) {
     $variables ['up']= $variables['content']['user_picture'];
     unset($variables['content']['user_picture']);
 }
+
+/**
+ * Implements hook_preprocess_node()
+ */
+function d8_materialize_preprocess_node(&$vars) {
+    $node_type = $vars['node']->getType();
+    // Social share icons.
+    $content_types_with_social_icons = array(
+      'session',
+      'page'
+    );
+    if (in_array($node_type, $content_types_with_social_icons)) {
+        global $base_root;
+        $vars['base_root'] = $base_root;
+        $site_name = \Drupal::config('system.site')->get('name');
+        $vars['site_name'] = $site_name;
+    }
+}
