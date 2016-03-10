@@ -1,0 +1,27 @@
+uuid: a93e2aaa-3f85-4a55-9a1a-262e2e00fbe3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ponentes
+    - node.type.training
+id: node.training.field_ponentes
+field_name: field_ponentes
+entity_type: node
+bundle: training
+label: Ponentes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+field_type: entity_reference
