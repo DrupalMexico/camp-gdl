@@ -23,6 +23,7 @@ visibility:
   user_role:
     id: user_role
     roles:
+      authenticated: authenticated
       administrator: administrator
     negate: false
     context_mapping:

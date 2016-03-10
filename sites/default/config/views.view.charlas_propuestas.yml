@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_experience
+    - field.storage.node.field_status
     - field.storage.node.field_track
     - field.storage.user.user_picture
     - node.type.session
@@ -554,7 +555,20 @@ display:
       title: 'Charlas Propuestas'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<p>No se han encontrado resultados. <strong><a href="/node/add/session">¡Propón una conferencia!</a></strong></p>'
+            format: basic_html
+          plugin_id: text
       relationships:
         uid:
           id: uid
@@ -626,72 +640,6 @@ display:
         - 'config:field.storage.node.field_experience'
         - 'config:field.storage.node.field_track'
         - 'config:field.storage.user.user_picture'
-  attachment_1:
-    display_plugin: attachment
-    id: attachment_1
-    display_title: Attachment
-    position: 2
-    display_options:
-      display_extenders: {  }
-      displays:
-        page_1: page_1
-      inherit_arguments: false
-      arguments:
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: summary
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: true
-          title: 'Charlas propuestas en {{ arguments.tid }}'
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            inline: true
-            separator: '|'
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: unformatted_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          add_table: false
-          require_value: false
-          reduce_duplicates: false
-          plugin_id: taxonomy_index_tid
-      defaults:
-        arguments: false
-      enabled: false
-    cache_metadata:
-      max-age: 0
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_experience'
-        - 'config:field.storage.node.field_track'
-        - 'config:field.storage.user.user_picture'
   page_1:
     display_plugin: page
     id: page_1
@@ -719,11 +667,13 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<p>En Drupal Camp cualquier persona puede proponer una charla. Se puede hablar de Drupal, CSS, HTML, Javascript, diseño responsivo, UX, Diseño, Social Media, tecnologías web, etc. Las charlas propuestas serán evaluadas y notificaremos a las personas cuyas charlas hayan sido seleccionadas. <strong><a href=\"node/add/session\">¡Propón una charla!</a></strong></p>\n<hr>"
+            value: "<p>En el DrupalCamp Guadalajara 2016 cualquier persona puede proponer una conferencia. Uno puede hablar de Drupal, CSS, HTML, Javascript, diseño responsivo, UX, Diseño, Social Media, tecnologías web, etc. Las conferencias propuestas serán evaluadas y notificaremos a las personas cuyas conferencias hayan sido seleccionadas. <br /><strong><a href=\"node/add/session\">¡Propón una conferencia!</a></strong></p>\n<hr>"
             format: full_html
           plugin_id: text
       defaults:
         header: false
+        title: false
+      title: 'Conferencias Propuestas'
     cache_metadata:
       max-age: 0
       contexts:
@@ -738,3 +688,380 @@ display:
         - 'config:field.storage.node.field_experience'
         - 'config:field.storage.node.field_track'
         - 'config:field.storage.user.user_picture'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'Page - Mis sesiones'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: user/sesiones
+      menu:
+        type: none
+        title: 'Charlas Propuestas'
+        description: ''
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<p>En el DrupalCamp Guadalajara 2016 cualquier persona puede proponer una conferencia. Uno puede hablar de Drupal, CSS, HTML, Javascript, diseño responsivo, UX, Diseño, Social Media, tecnologías web, etc. Las conferencias propuestas serán evaluadas y notificaremos a las personas cuyas conferencias hayan sido seleccionadas. <br /><strong><a href=\"/node/add/session\">¡Propón una conferencia!</a></strong></p>\n<hr>"
+            format: full_html
+          plugin_id: text
+      defaults:
+        header: false
+        title: false
+        fields: false
+        arguments: false
+        relationships: false
+        filters: false
+        filter_groups: false
+        access: false
+      title: 'Mis Conferencias Propuestas'
+      display_description: ''
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Título
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        field_experience:
+          id: field_experience
+          table: node__field_experience
+          field: field_experience
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Nivel
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_track:
+          id: field_track
+          table: node__field_track
+          field: field_track
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Track
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_status:
+          id: field_status
+          table: node__field_status
+          field: field_status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Status
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      arguments:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: current_user
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: numeric
+      relationships: {  }
+      filters:
+        status:
+          value: true
+          table: node_field_data
+          field: status
+          plugin_id: field
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+          type: boolean
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            session: session
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      access:
+        type: perm
+        options:
+          perm: 'create session content'
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_experience'
+        - 'config:field.storage.node.field_status'
+        - 'config:field.storage.node.field_track'

@@ -1,0 +1,20 @@
+uuid: 856e3088-649f-43cf-a208-8c8fa3af5712
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_ponentes
+field_name: field_ponentes
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

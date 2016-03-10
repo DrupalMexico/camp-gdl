@@ -1,5 +1,5 @@
-uuid: e03a91ed-eb41-4ba0-ac06-6f53f74aac12
-langcode: en
+uuid: 496f6d54-0591-49fe-8505-5ac2d5d1e169
+langcode: es
 status: true
 dependencies:
   config:
@@ -11,12 +11,12 @@ id: node.training.body
 field_name: body
 entity_type: node
 bundle: training
-label: Body
+label: Descripción
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
 field_type: text_with_summary
