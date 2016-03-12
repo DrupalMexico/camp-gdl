@@ -1,0 +1,13 @@
+#block-views-block-patrocinadores-organizadores-block-1 {
+  h3 {
+    text-align: center;
+  }
+  .view-display-id-block_1 {
+    text-align: center;
+  }
+  .view-display-id-attachment_1 {
+    .view-content {
+      @extend .row
+    }
+  }
+}
