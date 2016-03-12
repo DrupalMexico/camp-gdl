@@ -72,7 +72,7 @@ display:
               field: field_sponsor_level
               rendered: true
               rendered_strip: false
-          row_class: 'col s6'
+          row_class: ''
           default_row_class: true
       row:
         type: fields
@@ -418,10 +418,11 @@ display:
   attachment_1:
     display_plugin: attachment
     id: attachment_1
-    display_title: Organizador
+    display_title: Organizadores
     position: 2
     display_options:
       display_extenders: {  }
+      display_description: ''
       filters:
         vid:
           id: vid
@@ -486,7 +487,6 @@ display:
       displays:
         block_1: block_1
       attachment_position: after
-      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -501,7 +501,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: 'Gold Block'
     position: 1
     display_options:
       display_extenders: {  }
@@ -571,6 +571,7 @@ display:
         groups:
           1: AND
       css_class: ''
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
