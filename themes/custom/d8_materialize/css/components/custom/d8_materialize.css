@@ -2058,6 +2058,8 @@ footer.page-footer .footer-copyright {
 .camp-gdl-front {
   background-position: center center;
   background: radial-gradient(circle, #3091B9, #194B6E); }
+  .camp-gdl-front .row {
+    margin-bottom: 0; }
 
 .fighter-camp img {
   -webkit-transition: all 0.5s;
@@ -2240,3 +2242,20 @@ textarea {
 @media only screen and (max-width: 992px) {
   #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .views-row {
     margin-bottom: 20px; } }
+
+#block-keynotespeakers {
+  background: url("../../../images/custom/speakers-background-image.jpg");
+  background-size: cover; }
+  #block-keynotespeakers h2 {
+    text-shadow: 1px 2px 2px #000;
+    display: block;
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
+    color: #F9FF19; }
+  #block-keynotespeakers p {
+    text-shadow: 1px 2px 2px #000; }
+  #block-keynotespeakers .container h2, #block-keynotespeakers .page-title h2 {
+    color: #ffffff; }
+  #block-keynotespeakers .container p, #block-keynotespeakers .page-title p {
+    color: #ffffff; }

@@ -27,3 +27,30 @@
     }
   }
 }
+
+// Keynote speakers block.
+//////////////////////////
+#block-keynotespeakers {
+  background: url("../../../images/custom/speakers-background-image.jpg");
+  background-size: cover;
+  h2 {
+    text-shadow:1px 2px 2px #000;
+    display: block;
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
+    color: #F9FF19;
+  }
+  p {
+    text-shadow:1px 2px 2px #000;
+  }
+  .container {
+    h2 {
+      color: #ffffff;
+    }
+    p {
+      color: #ffffff;
+    }
+  }
+
+}

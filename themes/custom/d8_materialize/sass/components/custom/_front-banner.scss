@@ -7,6 +7,9 @@
 .camp-gdl-front {
   background-position: center center;
   background: radial-gradient( circle, #3091B9, #194B6E);
+  .row {
+    margin-bottom: 0;
+  }
 }
 .fighter-camp img {
   @include transition(all .5s);
