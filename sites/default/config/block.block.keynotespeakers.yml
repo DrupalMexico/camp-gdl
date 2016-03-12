@@ -1,25 +1,25 @@
-uuid: 24a85a2a-083d-4f1b-874d-77cab7c3192e
-langcode: en
+uuid: 56ef6838-5129-4006-a513-196c914cf4f6
+langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:basic:746058fe-3a67-40c4-a212-18c4be80a8fc'
+    - 'block_content:basic:cb396494-ed8f-46a2-a34a-74b9c142c973'
   module:
     - block_content
     - system
   theme:
     - d8_materialize
-id: counter
+id: keynotespeakers
 theme: d8_materialize
 region: content
-weight: -11
+weight: -18
 provider: null
-plugin: 'block_content:746058fe-3a67-40c4-a212-18c4be80a8fc'
+plugin: 'block_content:cb396494-ed8f-46a2-a34a-74b9c142c973'
 settings:
-  id: 'block_content:746058fe-3a67-40c4-a212-18c4be80a8fc'
-  label: Counter
+  id: 'block_content:cb396494-ed8f-46a2-a34a-74b9c142c973'
+  label: 'Keynote Speakers'
   provider: block_content
-  label_display: '0'
+  label_display: visible
   status: true
   info: ''
   view_mode: full

@@ -2035,7 +2035,8 @@ footer.page-footer .footer-copyright {
     top: 5px; }
 
 #block-useraccountmenu {
-  margin-top: 25px; }
+  margin-top: 25px;
+  margin-bottom: 25px; }
 
 .views-field-user-picture img {
   border-radius: 50%;
