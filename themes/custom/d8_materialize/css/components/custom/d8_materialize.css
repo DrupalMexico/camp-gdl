@@ -2164,6 +2164,10 @@ i.right {
   margin-bottom: 80px; }
   .profile .row.user-profile.user-profile-compact {
     margin-bottom: 10px; }
+    .profile .row.user-profile.user-profile-compact img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%; }
   .profile .row.user-profile h1 {
     margin-top: 0; }
 

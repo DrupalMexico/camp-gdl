@@ -4,13 +4,15 @@
     margin-bottom: 80px;
     &.user-profile-compact {
       margin-bottom: 10px;
+      img {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
     }
-
-
     h1 {
       margin-top: 0;
     }
-
   }
   .field--name-user-picture {
     margin-top: 10px;
