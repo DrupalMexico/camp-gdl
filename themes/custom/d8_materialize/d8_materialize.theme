@@ -38,6 +38,7 @@ function d8_materialize_preprocess_user(&$variables, $hook) {
  * Implements hook_preprocess_node()
  */
 function d8_materialize_preprocess_node(&$vars) {
+    $vars['is_front'] = Drupal::service('path.matcher')->isFrontPage();
     $node_type = $vars['node']->getType();
     // Social share icons.
     $content_types_with_social_icons = array(
