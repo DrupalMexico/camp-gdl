@@ -1,13 +1,29 @@
 #block-views-block-patrocinadores-organizadores-block-1 {
   h3 {
     text-align: center;
+    margin-bottom: 30px;
+    @media #{$medium-and-up} {
+      margin-top: 60px;
+    }
+    @media #{$medium-and-down} {
+      margin-top: 30px;
+    }
   }
   .view-display-id-block_1 {
     text-align: center;
   }
   .view-display-id-attachment_1 {
     .view-content {
-      @extend .row
+
+    }
+    .views-row {
+      @media #{$medium-and-up} {
+        width: 50%;
+        float: left;
+      }
+      @media #{$medium-and-down} {
+        margin-bottom: 20px;
+      }
     }
   }
 }
