@@ -1,0 +1,24 @@
+uuid: a9bde6f4-202d-4dcc-a500-0e60e1089317
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.patrocinadores_organizadores
+  module:
+    - views
+  theme:
+    - d8_materialize
+id: views_block__patrocinadores_organizadores_block_1
+theme: d8_materialize
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:patrocinadores_organizadores-block_1'
+settings:
+  id: 'views_block:patrocinadores_organizadores-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

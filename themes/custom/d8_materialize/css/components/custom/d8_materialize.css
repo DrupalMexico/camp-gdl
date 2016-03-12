@@ -1724,7 +1724,7 @@ nav .button-collapse {
 .indicator {
   display: none; }
 
-.row.l-navigation {
+.row.l-navigation, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .l-navigation.view-content {
   margin-bottom: 0; }
 
 .node__submitted {
@@ -1819,7 +1819,7 @@ nav.menu--main {
 li.menu-item.level-1 {
   float: initial; }
 
-.row.l-header {
+.row.l-header, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .l-header.view-content {
   margin-bottom: 0; }
 
 .block-system-branding-block {
@@ -2041,7 +2041,7 @@ footer.page-footer .footer-copyright {
   border-radius: 50%;
   border: 1px solid #000000; }
 
-.row.user-profile.user-profile-full img {
+.row.user-profile.user-profile-full img, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .user-profile.user-profile-full.view-content img {
   border-radius: 50%;
   border: 1px solid #000000; }
 
@@ -2128,18 +2128,30 @@ i.right {
   .branding-block img {
     max-height: 90px; }
 
-.page-node-type-session .row.article-container {
+.page-node-type-session .row.article-container, .page-node-type-session #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .article-container.view-content, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .page-node-type-session .article-container.view-content {
   margin-bottom: 100px; }
 
 @media only screen and (max-width: 600px) {
   .page-node-type-session .node__submitted {
     margin: 0; }
-  .page-node-type-session .row .col {
+  .page-node-type-session .row .col, .page-node-type-session #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .col, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .page-node-type-session .view-content .col {
     width: 100%;
     margin: 1em auto; }
-  .page-node-type-session .row .row .col.push-s2,
+  .page-node-type-session .row .row .col.push-s2, .page-node-type-session #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .row .col.push-s2, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .page-node-type-session .view-content .row .col.push-s2, .page-node-type-session .row #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .col.push-s2, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .page-node-type-session .row .view-content .col.push-s2, .page-node-type-session #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .view-content .col.push-s2, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .page-node-type-session .view-content .view-content .col.push-s2,
   .page-node-type-session .row .row .col.pull-s1,
-  .page-node-type-session .row .row .col.push-s1 {
+  .page-node-type-session #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .row .col.pull-s1, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1
+  .page-node-type-session .view-content .row .col.pull-s1,
+  .page-node-type-session .row #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .col.pull-s1, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1
+  .page-node-type-session .row .view-content .col.pull-s1,
+  .page-node-type-session #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .view-content .col.pull-s1, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1
+  .page-node-type-session .view-content .view-content .col.pull-s1,
+  .page-node-type-session .row .row .col.push-s1,
+  .page-node-type-session #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .row .col.push-s1, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1
+  .page-node-type-session .view-content .row .col.push-s1,
+  .page-node-type-session .row #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .col.push-s1, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1
+  .page-node-type-session .row .view-content .col.push-s1,
+  .page-node-type-session #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .view-content .view-content .col.push-s1, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1
+  .page-node-type-session .view-content .view-content .col.push-s1 {
     left: 0;
     right: 0; } }
 
@@ -2159,16 +2171,16 @@ i.right {
     .page-node-type-session .field--name-user-picture {
       margin: 0; } }
 
-.profile .row.user-profile {
+.profile .row.user-profile, .profile #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .user-profile.view-content, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .profile .user-profile.view-content {
   margin-top: 80px;
   margin-bottom: 80px; }
-  .profile .row.user-profile.user-profile-compact {
+  .profile .row.user-profile.user-profile-compact, .profile #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .user-profile.user-profile-compact.view-content, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .profile .user-profile.user-profile-compact.view-content {
     margin-bottom: 10px; }
-    .profile .row.user-profile.user-profile-compact img {
+    .profile .row.user-profile.user-profile-compact img, .profile #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .user-profile.user-profile-compact.view-content img, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .profile .user-profile.user-profile-compact.view-content img {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%; }
-  .profile .row.user-profile h1 {
+  .profile .row.user-profile h1, .profile #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .user-profile.view-content h1, #block-views-block-patrocinadores-organizadores-block-1 .view-display-id-attachment_1 .profile .user-profile.view-content h1 {
     margin-top: 0; }
 
 .profile .field--name-user-picture {
@@ -2217,3 +2229,9 @@ textarea {
   .social .share-title {
     font-size: 20px;
     font-family: "Open Sans"; }
+
+#block-views-block-patrocinadores-organizadores-block-1 h3 {
+  text-align: center; }
+
+#block-views-block-patrocinadores-organizadores-block-1 .view-display-id-block_1 {
+  text-align: center; }

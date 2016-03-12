@@ -9,9 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Patrocinador
+name: 'Patrocinador / Organizador'
 type: sponsor
-description: Patrocinadores
+description: 'Patrocinadores u Organizadores'
 help: ''
 new_revision: false
 preview_mode: 1
