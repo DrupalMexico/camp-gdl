@@ -13,7 +13,7 @@ dependencies:
     - field.field.user.user.field_linkedin_profile
     - field.field.user.user.field_twitter_profile
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.thumbnail_squa
   module:
     - image
     - link
@@ -110,8 +110,8 @@ content:
     type: image
     weight: 0
     settings:
-      image_style: thumbnail
-      image_link: content
+      image_style: thumbnail_squa
+      image_link: ''
     third_party_settings: {  }
     label: hidden
 hidden: {  }
