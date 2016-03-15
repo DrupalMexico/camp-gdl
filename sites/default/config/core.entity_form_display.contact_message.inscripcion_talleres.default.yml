@@ -1,0 +1,50 @@
+uuid: e0fb076d-687c-4c2a-9b45-69bc61cd8ffb
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.inscripcion_talleres
+    - field.field.contact_message.inscripcion_talleres.field_pago_taller
+    - field.field.contact_message.inscripcion_talleres.field_taller_matutino
+    - field.field.contact_message.inscripcion_talleres.field_taller_referencia
+    - field.field.contact_message.inscripcion_talleres.field_taller_vespertino
+id: contact_message.inscripcion_talleres.default
+targetEntityType: contact_message
+bundle: inscripcion_talleres
+mode: default
+content:
+  field_pago_taller:
+    weight: 53
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_taller_matutino:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_taller_referencia:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_taller_vespertino:
+    weight: 52
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  mail:
+    weight: -40
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    weight: -50
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  copy: true
+  langcode: true
+  message: true
+  subject: true

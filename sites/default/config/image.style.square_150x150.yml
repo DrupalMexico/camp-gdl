@@ -1,0 +1,14 @@
+uuid: b4b635a0-ddaf-46fe-ae12-18aa11ae70d7
+langcode: es
+status: true
+dependencies: {  }
+name: square_150x150
+label: 'Square 150x150'
+effects:
+  f1d2d8f6-5a16-4d7f-b305-5e0cc1689492:
+    uuid: f1d2d8f6-5a16-4d7f-b305-5e0cc1689492
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150

@@ -1,0 +1,21 @@
+uuid: e712e17b-75fb-470a-982a-427de3933c3e
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.inscripcion_talleres
+    - field.storage.contact_message.field_taller_vespertino
+  module:
+    - options
+id: contact_message.inscripcion_talleres.field_taller_vespertino
+field_name: field_taller_vespertino
+entity_type: contact_message
+bundle: inscripcion_talleres
+label: 'Taller vespertino'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

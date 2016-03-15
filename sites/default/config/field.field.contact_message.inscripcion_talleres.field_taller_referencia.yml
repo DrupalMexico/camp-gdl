@@ -1,0 +1,19 @@
+uuid: b6dd0b9b-a5a1-4604-8b55-85e413f10cfc
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.inscripcion_talleres
+    - field.storage.contact_message.field_taller_referencia
+id: contact_message.inscripcion_talleres.field_taller_referencia
+field_name: field_taller_referencia
+entity_type: contact_message
+bundle: inscripcion_talleres
+label: Referencia
+description: 'Si seleccionaste Paypal o Depósito/Transferencia, escribe el número de referencia para poder apartarte tu lugar.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
