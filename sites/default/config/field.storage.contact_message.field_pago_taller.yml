@@ -1,0 +1,30 @@
+uuid: f49c5a90-83c2-4ba6-af08-8d28ceb62ba2
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_pago_taller
+field_name: field_pago_taller
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: paypal
+      label: Paypal
+    -
+      value: deposito
+      label: 'Depósito o transferencia bancaria'
+    -
+      value: sameday
+      label: 'Pagaré el mismo día del taller'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

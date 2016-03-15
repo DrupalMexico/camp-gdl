@@ -1,0 +1,10 @@
+uuid: daceeb55-1c84-42c8-a400-cdf66ca16591
+langcode: es
+status: true
+dependencies: {  }
+id: inscripcion_talleres
+label: 'Inscripción a Talleres'
+recipients:
+  - arlina.espinoza@gmail.com
+reply: ''
+weight: 0

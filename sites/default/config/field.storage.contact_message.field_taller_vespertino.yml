@@ -1,0 +1,30 @@
+uuid: 6ed6ca54-0506-4386-9700-e494ef3d435b
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_taller_vespertino
+field_name: field_taller_vespertino
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: principiante1
+      label: 'Sitebuilding Drupal 8 <i>(Principiante)</i>'
+    -
+      value: intermedio1
+      label: 'Git / Github <i>(Intermedio)</i>'
+    -
+      value: avanzado1
+      label: 'Desarrollo de módulos Drupal 8 <i>(Avanzado)</i>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

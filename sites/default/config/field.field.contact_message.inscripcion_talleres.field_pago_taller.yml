@@ -1,0 +1,21 @@
+uuid: 5fd6a661-fc9c-4c92-8800-d49972135f54
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.inscripcion_talleres
+    - field.storage.contact_message.field_pago_taller
+  module:
+    - options
+id: contact_message.inscripcion_talleres.field_pago_taller
+field_name: field_pago_taller
+entity_type: contact_message
+bundle: inscripcion_talleres
+label: '¿Cómo pagaste la entrada al día de talleres?'
+description: 'Por favor ten en consideración que si te esperas a pagar el día del taller, tu entrada estará sujeta a disponibilidad.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

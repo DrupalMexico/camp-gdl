@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_track
     - field.storage.user.user_picture
     - node.type.session
-    - taxonomy.vocabulary.session_tracks
   module:
     - image
     - node
@@ -449,93 +448,6 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
-        field_experience_value:
-          id: field_experience_value
-          table: node__field_experience
-          field: field_experience_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_experience_value_op
-            label: Nivel
-            description: ''
-            use_operator: false
-            operator: field_experience_value_op
-            identifier: field_experience_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              speaker: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-        field_track_target_id:
-          id: field_track_target_id
-          table: node__field_track
-          field: field_track_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_track_target_id_op
-            label: Track
-            description: ''
-            use_operator: false
-            operator: field_track_target_id_op
-            identifier: field_track_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              speaker: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: session_tracks
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -633,7 +545,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -670,10 +581,49 @@ display:
             value: "<p>En el DrupalCamp Guadalajara 2016 cualquier persona puede proponer una conferencia. Uno puede hablar de Drupal, CSS, HTML, Javascript, diseño responsivo, UX, Diseño, Social Media, tecnologías web, etc. Las conferencias propuestas serán evaluadas y notificaremos a las personas cuyas conferencias hayan sido seleccionadas. <br /><strong><a href=\"node/add/session\">¡Propón una conferencia!</a></strong></p>\n<hr>"
             format: full_html
           plugin_id: text
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Mostrando @start - @end de @total'
+          plugin_id: result
       defaults:
         header: false
         title: false
+        filters: false
+        filter_groups: false
       title: 'Conferencias Propuestas'
+      filters:
+        status:
+          value: true
+          table: node_field_data
+          field: status
+          plugin_id: field
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+          type: boolean
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            session: session
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: 0
       contexts:
@@ -681,7 +631,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1065,3 +1014,130 @@ display:
         - 'config:field.storage.node.field_experience'
         - 'config:field.storage.node.field_status'
         - 'config:field.storage.node.field_track'
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: Aprobadas
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: charlas-aprobadas
+      menu:
+        type: none
+        title: 'Charlas Propuestas'
+        description: ''
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: ''
+            format: full_html
+          plugin_id: text
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Mostrando @start - @end de @total'
+          plugin_id: result
+      defaults:
+        header: false
+        title: false
+        filters: false
+        filter_groups: false
+        arguments: false
+      title: 'Conferencias Aprobadas'
+      display_description: ''
+      filters:
+        status:
+          value: true
+          table: node_field_data
+          field: status
+          plugin_id: field
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+          type: boolean
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            session: session
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+        field_status_value:
+          id: field_status_value
+          table: node__field_status
+          field: field_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Aprobada: Aprobada
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      arguments: {  }
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_experience'
+        - 'config:field.storage.node.field_track'
+        - 'config:field.storage.user.user_picture'

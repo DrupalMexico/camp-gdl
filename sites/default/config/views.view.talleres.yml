@@ -489,7 +489,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: talleres
+      path: talleres-1
       menu:
         type: none
         title: 'Charlas Propuestas'
