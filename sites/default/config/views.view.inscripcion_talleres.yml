@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - contact.form.inscripcion_talleres
-    - field.storage.contact_message.field_email
-    - field.storage.contact_message.field_name
     - field.storage.contact_message.field_pago_taller
     - field.storage.contact_message.field_taller_matutino
     - field.storage.contact_message.field_taller_referencia
@@ -14,7 +12,6 @@ dependencies:
   module:
     - contact
     - options
-    - text
     - user
 id: inscripcion_talleres
 label: 'Inscripción a Talleres'
@@ -150,14 +147,14 @@ display:
           entity_type: contact_message
           entity_field: created
           plugin_id: field
-        field_name:
-          id: field_name
-          table: contact_message__field_name
-          field: field_name
+        name:
+          id: name
+          table: contact_message
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
-          label: Name
+          label: Nombre
           exclude: false
           alter:
             alter_text: false
@@ -199,8 +196,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
-          settings: {  }
+          type: string
+          settings:
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -211,11 +209,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: contact_message
+          entity_field: name
           plugin_id: field
-        field_email:
-          id: field_email
-          table: contact_message__field_email
-          field: field_email
+        mail:
+          id: mail
+          table: contact_message
+          field: mail
           relationship: none
           group_type: group
           admin_label: ''
@@ -273,6 +273,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: contact_message
+          entity_field: mail
           plugin_id: field
         field_taller_matutino:
           id: field_taller_matutino
@@ -763,8 +765,6 @@ display:
         - url.query_args
         - user.roles
       tags:
-        - 'config:field.storage.contact_message.field_email'
-        - 'config:field.storage.contact_message.field_name'
         - 'config:field.storage.contact_message.field_pago_taller'
         - 'config:field.storage.contact_message.field_taller_matutino'
         - 'config:field.storage.contact_message.field_taller_referencia'
@@ -786,8 +786,6 @@ display:
         - url.query_args
         - user.roles
       tags:
-        - 'config:field.storage.contact_message.field_email'
-        - 'config:field.storage.contact_message.field_name'
         - 'config:field.storage.contact_message.field_pago_taller'
         - 'config:field.storage.contact_message.field_taller_matutino'
         - 'config:field.storage.contact_message.field_taller_referencia'

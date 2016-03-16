@@ -1,10 +1,15 @@
 uuid: daceeb55-1c84-42c8-a400-cdf66ca16591
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    redirect_uri: 'entity:node/64'
 id: inscripcion_talleres
 label: 'Inscripción a Talleres'
 recipients:
-  - arlina.espinoza@gmail.com
+  - info@drupalcamp.mx
 reply: ''
 weight: 0

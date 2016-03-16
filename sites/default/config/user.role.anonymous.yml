@@ -13,3 +13,4 @@ permissions:
   4: 'access site-wide contact form'
   5: 'access user profiles'
   6: 'use text format basic_html'
+  7: 'access user contact forms'
