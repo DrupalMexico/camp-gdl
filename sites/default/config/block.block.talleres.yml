@@ -1,0 +1,31 @@
+uuid: 320027fb-c6a5-4b61-9109-9a861894a974
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f7c79f70-80fc-4625-bd25-37f5e5376fe9'
+  module:
+    - block_content
+    - system
+  theme:
+    - d8_materialize
+id: talleres
+theme: d8_materialize
+region: content
+weight: -19
+provider: null
+plugin: 'block_content:f7c79f70-80fc-4625-bd25-37f5e5376fe9'
+settings:
+  id: 'block_content:f7c79f70-80fc-4625-bd25-37f5e5376fe9'
+  label: Talleres
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/contact/inscripcion_talleres*'
+    negate: false
+    context_mapping: {  }
