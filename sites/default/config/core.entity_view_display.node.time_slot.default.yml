@@ -1,0 +1,44 @@
+uuid: ca85f19b-dd9a-4883-be03-3cce367a1770
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.time_slot.field_room
+    - field.field.node.time_slot.field_session_end_date
+    - field.field.node.time_slot.field_session_start_date
+    - node.type.time_slot
+  module:
+    - datetime
+    - user
+id: node.time_slot.default
+targetEntityType: node
+bundle: time_slot
+mode: default
+content:
+  field_room:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_session_end_date:
+    weight: 106
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_session_start_date:
+    weight: 105
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  links:
+    weight: 100
+hidden:
+  langcode: true

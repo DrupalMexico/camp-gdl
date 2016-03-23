@@ -1,0 +1,22 @@
+uuid: d9e96c5d-edad-4ca4-9f00-d1447748d06a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.room
+id: node.room.promote
+field_name: promote
+entity_type: node
+bundle: room
+label: 'Promovido a la portada'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

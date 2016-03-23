@@ -1,0 +1,26 @@
+uuid: 3ae5bded-ebfc-47e5-8607-7c7354de5cef
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room
+    - node.type.room
+    - node.type.time_slot
+id: node.time_slot.field_room
+field_name: field_room
+entity_type: node
+bundle: time_slot
+label: Room
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      room: room
+    sort:
+      field: _none
+field_type: entity_reference

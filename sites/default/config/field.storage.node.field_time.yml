@@ -1,0 +1,19 @@
+uuid: a2ea5316-3cc3-475b-9b00-db4cc423c69f
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_time
+field_name: field_time
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

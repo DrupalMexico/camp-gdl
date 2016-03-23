@@ -1,0 +1,24 @@
+uuid: c800c387-78b7-4604-ac00-d6d62b72fb8d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_end_date
+    - node.type.time_slot
+  module:
+    - datetime
+id: node.time_slot.field_session_end_date
+field_name: field_session_end_date
+entity_type: node
+bundle: time_slot
+label: 'End Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

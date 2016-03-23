@@ -1,0 +1,18 @@
+uuid: 50448792-52a4-4ab0-b84c-768518d9d382
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Time Slot'
+type: time_slot
+description: 'Use el tipo de contenido <em>Time Slot</em>, para dar de alta los tiempos en los diferentes <em>Roomst</em> para llevar las conferencias '
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

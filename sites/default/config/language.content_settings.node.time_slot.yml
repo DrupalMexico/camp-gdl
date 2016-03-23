@@ -1,0 +1,11 @@
+uuid: fa0746e3-f8da-438e-8100-c70599153a0f
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.time_slot
+id: node.time_slot
+target_entity_type_id: node
+target_bundle: time_slot
+default_langcode: site_default
+language_alterable: false

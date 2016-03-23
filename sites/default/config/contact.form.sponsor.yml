@@ -2,6 +2,9 @@ uuid: 735c089f-77d2-49a9-b600-f448c12e022f
 langcode: en
 status: true
 dependencies: {  }
+third_party_settings:
+  contact_storage:
+    redirect_uri: ''
 id: sponsor
 label: 'Participa como patrocinador'
 recipients:
