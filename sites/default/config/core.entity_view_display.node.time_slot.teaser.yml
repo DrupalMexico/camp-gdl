@@ -1,0 +1,18 @@
+uuid: b2a39892-b94f-42b0-8e20-324e9ec627a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.time_slot
+  module:
+    - user
+id: node.time_slot.teaser
+targetEntityType: node
+bundle: time_slot
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  langcode: true

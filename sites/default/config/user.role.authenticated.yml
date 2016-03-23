@@ -18,3 +18,4 @@ permissions:
   9: 'edit own session content'
   10: 'access user profiles'
   11: 'access user contact forms'
+  12: 'create session content'

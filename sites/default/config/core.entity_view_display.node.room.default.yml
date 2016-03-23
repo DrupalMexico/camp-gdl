@@ -1,0 +1,17 @@
+uuid: 65305eab-5767-4f2d-9124-36b5e68a5dd5
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.room
+  module:
+    - user
+id: node.room.default
+targetEntityType: node
+bundle: room
+mode: default
+content:
+  links:
+    weight: 100
+hidden:
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: e01d5870-0030-49e7-8903-3e5287889422
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.room
+  module:
+    - user
+id: node.room.teaser
+targetEntityType: node
+bundle: room
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  langcode: true

@@ -1,63 +1,43 @@
-uuid: 5a9d76c0-a3d1-40e4-8d53-831516cb974b
-langcode: en
+uuid: 2ee35357-2593-4348-ba03-3bc0fe6c6506
+langcode: es
 status: true
 dependencies:
   config:
-    - field.field.node.session.body
-    - field.field.node.session.field_experience
-    - field.field.node.session.field_slides
-    - field.field.node.session.field_status
-    - field.field.node.session.field_time
-    - field.field.node.session.field_track
-    - node.type.session
+    - field.field.node.time_slot.field_room
+    - field.field.node.time_slot.field_session_end_date
+    - field.field.node.time_slot.field_session_start_date
+    - node.type.time_slot
   module:
-    - file
+    - datetime
     - path
-    - text
-id: node.session.default
+id: node.time_slot.default
 targetEntityType: node
-bundle: session
+bundle: time_slot
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 31
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     settings: {  }
     third_party_settings: {  }
-  field_experience:
-    weight: 33
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_slides:
-    weight: 34
+  field_room:
+    weight: 32
     settings:
-      progress_indicator: throbber
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: file_generic
-  field_status:
-    weight: 35
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_time:
+    type: entity_reference_autocomplete
+  field_session_end_date:
     weight: 36
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-  field_track:
-    type: options_select
-    weight: 32
+    type: datetime_default
+  field_session_start_date:
+    weight: 35
     settings: {  }
     third_party_settings: {  }
+    type: datetime_default
   langcode:
     type: language_select
     weight: 2
@@ -70,15 +50,15 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
     settings:
       display_label: true
+    weight: 15
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
     settings:
       display_label: true
+    weight: 16
     third_party_settings: {  }
   title:
     type: string_textfield

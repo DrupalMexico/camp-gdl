@@ -1,0 +1,22 @@
+uuid: 36d20eee-8d31-4377-9b00-c40afa26eaf3
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.room
+id: node.room.status
+field_name: status
+entity_type: node
+bundle: room
+label: 'Estado de publicación'
+description: 'Un booleano que indica si el nodo está publicado.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean
