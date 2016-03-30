@@ -800,7 +800,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"item {{ type|lower|replace({' ': '-'}) }}\">\n<div class=\"title\">{{ title }}</div>\n<div class=\"title\">{{ title_1 }}</div>\n<div class=\"room\">{{ field_room }}</div>\n<div class=\"track\">{{ field_track }}</div>\n<div class=\"image\">{{ name }}</div>\n<div class=\"image\">{{ user_picture }}</div>\n</div>"
+            text: "<div class=\"item {{ type|lower|replace({' ': '-'}) }} row\">\n  <div class=\"divider\"></div>\n  <div class=\"section\">\n  <div class=\"session-info col s10\">\n     <div class=\"title-link\">{{ title }}</div>\n    <div class=\"title\">{{ title_1 }}</div>\n    <div class=\"room {{ field_room|lower|replace({' ': '-'}) }}\">Lugar: {{ field_room }}</div>\n    <div class=\"track\">Track: {{ field_track }}</div>\n  </div>\n  <div class=\"speaker-info col s2\">\n    <div class=\"user-picture\">{{ user_picture }}</div>\n    <div class=\"user-name\">{{ name }}</div>\n  </div>\n</div>\n</div>"
             make_link: false
             path: ''
             absolute: false

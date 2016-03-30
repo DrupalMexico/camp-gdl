@@ -1,12 +1,49 @@
 .view-schedule{
+  .view-header{
+    padding-bottom: 20px;
+    .tabs .tab a {
+      color: $link-color;
+      &.active{
+        color: #1D597D;
+      }
+    }
+  }
   .title-time{
-    background: #1D597D;;
+    background: #1D597D;
     color: white;
   }
   .sessions{
+    min-height: 100px;
+    padding-bottom: 15px;
     .item{
-      .schedule-item{
-
+      clear: both;
+      .title,
+      .title-link{
+        display: none;
+      }
+      .user-name,
+      .user-picture{
+        text-align: center;
+      }
+      &.schedule-item{
+        .title{
+          display: block;
+        }
+        .user-name,
+        .user-picture{
+          display: none;
+        }
+        .track{
+          display: none;
+        }
+        .room.common{
+          display: none;
+        }
+      }
+      &.sesión{
+        .title-link {
+          display: block;
+        }
       }
     }
   }
