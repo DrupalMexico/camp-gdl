@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 
@@ -2051,6 +2052,40 @@ footer.page-footer .footer-copyright {
   line-height: inherit;
   color: #fff;
   background-color: inherit; }
+
+.view-schedule .view-header {
+  padding-bottom: 20px; }
+  .view-schedule .view-header .tabs .tab a {
+    color: #039be5; }
+    .view-schedule .view-header .tabs .tab a.active {
+      color: #1D597D; }
+
+.view-schedule .title-time {
+  background: #1D597D;
+  color: white; }
+
+.view-schedule .sessions {
+  min-height: 100px;
+  padding-bottom: 15px; }
+  .view-schedule .sessions .item {
+    clear: both; }
+    .view-schedule .sessions .item .title,
+    .view-schedule .sessions .item .title-link {
+      display: none; }
+    .view-schedule .sessions .item .user-name,
+    .view-schedule .sessions .item .user-picture {
+      text-align: center; }
+    .view-schedule .sessions .item.schedule-item .title {
+      display: block; }
+    .view-schedule .sessions .item.schedule-item .user-name,
+    .view-schedule .sessions .item.schedule-item .user-picture {
+      display: none; }
+    .view-schedule .sessions .item.schedule-item .track {
+      display: none; }
+    .view-schedule .sessions .item.schedule-item .room.common {
+      display: none; }
+    .view-schedule .sessions .item.sesión .title-link {
+      display: block; }
 
 /**
 * Frontpage Banner & Blocks

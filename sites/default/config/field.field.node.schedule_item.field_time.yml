@@ -1,0 +1,25 @@
+uuid: 446dc4f3-f01d-492c-a706-06da8ff32114
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_time
+    - node.type.schedule_item
+id: node.schedule_item.field_time
+field_name: field_time
+entity_type: node
+bundle: schedule_item
+label: Time
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: time_slots
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

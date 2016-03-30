@@ -1,0 +1,11 @@
+uuid: e3136848-0ba2-4a32-af39-5704d3afe11e
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.schedule_item
+id: node.schedule_item
+target_entity_type_id: node
+target_bundle: schedule_item
+default_langcode: site_default
+language_alterable: false

@@ -1,21 +1,19 @@
-uuid: b2a39892-b94f-42b0-8e20-324e9ec627a6
+uuid: 2e0cb8f1-ad9d-4294-9554-849c8f0ff23c
 langcode: es
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - node.type.time_slot
+    - node.type.schedule_item
   module:
     - user
-id: node.time_slot.teaser
+id: node.schedule_item.teaser
 targetEntityType: node
-bundle: time_slot
+bundle: schedule_item
 mode: teaser
 content:
   links:
     weight: 100
 hidden:
-  field_room: true
-  field_session_end_date: true
-  field_session_start_date: true
+  field_time: true
   langcode: true
