@@ -2058,7 +2058,8 @@ footer.page-footer .footer-copyright {
   .view-schedule .view-header .tabs .tab a {
     color: #039be5; }
     .view-schedule .view-header .tabs .tab a.active {
-      color: #1D597D; }
+      color: #1D597D;
+      border-bottom: 3px solid #1D597D; }
 
 .view-schedule .title-time {
   background: #1D597D;

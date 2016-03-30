@@ -150,7 +150,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: 'l d F'
+            date_format: 'd F'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -955,7 +955,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "    <ul class=\"tabs\">\n      <li class=\"tab col s3\"><a class=\"active\" href=\"#viernes-08-abril\">Viernes 8 Abril</a></li>\n      <li class=\"tab col s3\"><a href=\"#sabado-09-abril\">Sábado 9 Abril</a></li>\n    </ul>\n"
+            value: "    <ul class=\"tabs\">\n      <li class=\"tab col s3\"><a class=\"active\" href=\"#08-abril\">Viernes 8 Abril</a></li>\n      <li class=\"tab col s3\"><a href=\"#09-abril\">Sábado 9 Abril</a></li>\n    </ul>\n"
             format: full_html
           plugin_id: text
       footer: {  }
