@@ -2052,6 +2052,10 @@ footer.page-footer .footer-copyright {
   color: #fff;
   background-color: inherit; }
 
+.view-schedule .title-time {
+  background: #1D597D;
+  color: white; }
+
 /**
 * Frontpage Banner & Blocks
 */

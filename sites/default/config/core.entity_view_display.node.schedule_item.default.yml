@@ -1,0 +1,25 @@
+uuid: e2421b2b-86cc-4aea-a107-7b099fbe38c5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.schedule_item.field_time
+    - node.type.schedule_item
+  module:
+    - user
+id: node.schedule_item.default
+targetEntityType: node
+bundle: schedule_item
+mode: default
+content:
+  field_time:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 100
+hidden:
+  langcode: true
