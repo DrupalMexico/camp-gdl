@@ -5,6 +5,7 @@
       color: $link-color;
       &.active{
         color: #1D597D;
+        border-bottom: 3px solid #1D597D;
       }
     }
   }
